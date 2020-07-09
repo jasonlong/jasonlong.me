@@ -12,15 +12,16 @@ export default function IndexPage() {
         <meta name="twitter:description" content="GitHub Product Designerd" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap" rel="stylesheet" />
       </Head>
 
       <div className="container flex flex-col pt-32 h-screen text-gray-900 px-6 text-left xl:text-left max-w-2xl md:max-w-3xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl tracking-tight sm:text-4xl md:text-5xl font-bold leading-tight">
-            Hi, I'm Jason Long,
+          <h1 className="font-heading tracking-tight text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+            Hi. I'm Jason.
           </h1>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-600">
-            a product designer at GitHub.
+          <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-600">
+            I'm a product designer at GitHub.
           </h2>
         </div>
 
