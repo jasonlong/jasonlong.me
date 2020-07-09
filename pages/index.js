@@ -1,9 +1,14 @@
 import Layout from "../components/layout.js"
 import Link from 'next/link'
+import Head from 'next/head'
 
 export default function IndexPage() {
   return (
     <Layout>
+      <Head>
+        <title>Jason Long</title>
+      </Head>
+
       <div className="container flex flex-col pt-32 h-screen text-gray-900 px-6 text-left xl:text-left max-w-2xl md:max-w-3xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl tracking-tight sm:text-4xl md:text-5xl font-bold leading-tight">
@@ -15,13 +20,13 @@ export default function IndexPage() {
         </div>
 
         <p className="py-2 text-md md:text-lg font-medium">
-          <a href="https://github.com/jasonlong" className="text-blue-600 hover:text-blue-700">GitHub</a>
+          <a href="https://github.com/jasonlong" className="text-blue-700 hover:text-blue-800">GitHub</a>
         </p>
         <p className="py-2 text-md md:text-lg font-medium">
-          <a href="https://twitter.com/jasonlong" className="text-blue-600 hover:text-blue-700">Twitter</a>
+          <a href="https://twitter.com/jasonlong" className="text-blue-700 hover:text-blue-800">Twitter</a>
         </p>
         <p className="py-2 text-md md:text-lg font-medium">
-          <a href="mailto:jason@jasonlong.me" className="text-blue-600 hover:text-blue-700">Email</a>
+          <a href="mailto:jason@jasonlong.me" className="text-blue-700 hover:text-blue-800">Email</a>
         </p>
       </div>
     </Layout>
