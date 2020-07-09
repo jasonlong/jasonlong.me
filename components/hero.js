@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="mb-8">
+    <div className="mb-6 md:mb-8">
       <h1 className="font-heading tracking-tight text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
         Hi. I'm Jason.
       </h1>

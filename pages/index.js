@@ -17,15 +17,19 @@ export default function IndexPage() {
 
         <Hero />
 
-        <p className="py-2 text-md md:text-lg font-medium">
-          <a href="https://github.com/jasonlong" className="text-blue-700 hover:text-blue-800">GitHub</a>
-        </p>
-        <p className="py-2 text-md md:text-lg font-medium">
-          <a href="https://twitter.com/jasonlong" className="text-blue-700 hover:text-blue-800">Twitter</a>
-        </p>
-        <p className="py-2 text-md md:text-lg font-medium">
-          <a href="mailto:jason@jasonlong.me" className="text-blue-700 hover:text-blue-800">Email</a>
-        </p>
+        <div className="flex">
+          <a href="https://github.com/jasonlong">
+            <img src="icons/github.svg" alt="GitHub" className="w-12 md:w-16 pr-2" />
+          </a>
+
+          <a href="https://twitter.com/jasonlong">
+            <img src="icons/twitter.svg" alt="Twitter" className="w-12 md:w-16 pr-2" />
+          </a>
+
+          <a href="mailto:jason@jasonlong.me">
+            <img src="icons/gmail.svg" alt="Email me" className="w-12 md:w-16 pr-2" />
+          </a>
+        </div>
       </div>
     </Layout>
   )
