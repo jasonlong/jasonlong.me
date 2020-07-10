@@ -1,6 +1,12 @@
 export default function Hero() {
   return (
     <div className="mb-6 md:mb-8">
+      <img
+        src="/images/profile.jpg"
+        className="rounded-full w-16 md:w-24 mb-4"
+        alt="Jason Long profile photo"
+      />
+
       <h1 className="font-heading tracking-tight text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
         Hi. I'm Jason.
       </h1>

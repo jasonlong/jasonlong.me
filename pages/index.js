@@ -17,17 +17,17 @@ export default function IndexPage() {
 
         <Hero />
 
-        <div className="flex">
+        <div className="flex mt-4 md:mt-6">
           <a href="https://github.com/jasonlong">
-            <img src="icons/github.svg" alt="GitHub" className="w-12 md:w-16 pr-2" />
+            <img src="/images/icons/github.svg" alt="GitHub" className="w-8 md:w-12 mr-5" />
           </a>
 
           <a href="https://twitter.com/jasonlong">
-            <img src="icons/twitter.svg" alt="Twitter" className="w-12 md:w-16 pr-2" />
+            <img src="/images/icons/twitter.svg" alt="Twitter" className="w-8 md:w-12 mr-5" />
           </a>
 
           <a href="mailto:jason@jasonlong.me">
-            <img src="icons/gmail.svg" alt="Email me" className="w-12 md:w-16 pr-2" />
+            <img src="/images/icons/gmail.svg" alt="Email me" className="w-8 md:w-12 mr-5" />
           </a>
         </div>
       </div>
