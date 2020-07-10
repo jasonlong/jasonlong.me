@@ -26,6 +26,10 @@ export default function IndexPage() {
             <img src="/images/icons/twitter.svg" alt="Twitter" className="w-8 md:w-12 mr-5" />
           </a>
 
+          <a href="https://dribbble.com/jasonlong">
+            <img src="/images/icons/dribbble.svg" alt="Dribbble" className="w-8 md:w-12 mr-5" />
+          </a>
+
           <a href="mailto:jason@jasonlong.me">
             <img src="/images/icons/gmail.svg" alt="Email me" className="w-8 md:w-12 mr-5" />
           </a>
