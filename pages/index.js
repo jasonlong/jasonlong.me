@@ -11,6 +11,7 @@ export default function IndexPage() {
         <meta name="description" content="Personal site of Jason Long"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap" rel="stylesheet" />
+        <script async defer data-domain="jasonlong.me" src="https://plausible.io/js/plausible.js"></script>
       </Head>
 
       <div className="container flex flex-col pt-32 h-screen text-gray-900 px-6 text-left xl:text-left max-w-2xl md:max-w-3xl mx-auto">
