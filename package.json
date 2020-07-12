@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.0"
+    "tailwindcss": "^1.4.0",
+    "tailwindcss-dark-mode": "^1.1.4"
   }
 }
