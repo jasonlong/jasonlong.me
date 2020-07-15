@@ -1,5 +1,5 @@
 import '../styles/index.css'
-import "react-toggle/style.css"
+import '../styles/toggle.css'
 import App from 'next/app'
 import withDarkMode, { useDarkMode } from 'next-dark-mode'
 
