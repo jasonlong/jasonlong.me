@@ -21,7 +21,7 @@ export default function Layout({ children }) {
   return (
     <div className={`mode-${darkModeActive ? 'dark' : 'light'}`}>
       <div className="bg-white dark:bg-gray-900">
-        <div className="pt-8 pr-48 text-right">
+        <div className="pt-8 pr-8 text-right">
           <Toggle
             defaultChecked={darkModeActive}
             icons={{
