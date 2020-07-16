@@ -2,6 +2,7 @@ import Layout from "../components/layout"
 import Link from 'next/link'
 import Head from 'next/head'
 import Hero from '../components/hero'
+import SocialMediaIcon from '../components/social-media-icon'
 
 export default function IndexPage() {
 
@@ -20,17 +21,9 @@ export default function IndexPage() {
         <Hero />
 
         <div className="flex mt-4 md:mt-6">
-          <a href="https://github.com/jasonlong">
-            <img src="/images/icons/github.svg" alt="GitHub" className="w-8 md:w-12 mr-5" />
-          </a>
-
-          <a href="https://twitter.com/jasonlong">
-            <img src="/images/icons/twitter.svg" alt="Twitter" className="w-8 md:w-12 mr-5" />
-          </a>
-
-          <a href="https://dribbble.com/jasonlong">
-            <img src="/images/icons/dribbble.svg" alt="Dribbble" className="w-8 md:w-12 mr-5" />
-          </a>
+          <SocialMediaIcon icon="GitHub" url="https://github.com/jasonlong" />
+          <SocialMediaIcon icon="Twitter" url="https://twitter.com/jasonlong" />
+          <SocialMediaIcon icon="Dribbble" url="https://dribbble.com/jasonlong" />
         </div>
       </div>
 
