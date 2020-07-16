@@ -7,12 +7,6 @@ import Moon from '../components/moon'
 export default function Layout({ children }) {
   const { autoModeActive, darkModeActive, switchToAutoMode, switchToDarkMode, switchToLightMode } = useDarkMode()
 
-  const findActive = (text) => {
-    if (autoModeActive) return text === 'auto'
-    else if (darkModeActive) return text === 'dark'
-    else return text === 'light'
-  }
-
   const toggleMode = () => {
     if (darkModeActive) switchToLightMode()
     else switchToDarkMode()
@@ -23,7 +17,7 @@ export default function Layout({ children }) {
       <div className="bg-white dark:bg-gray-900">
         <div className="pt-8 pr-8 text-right">
           <Toggle
-            defaultChecked={darkModeActive}
+            checked={darkModeActive}
             icons={{
               checked: <Moon />,
               unchecked: <Sun />
