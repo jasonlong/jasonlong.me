@@ -1,9 +1,4 @@
 module.exports = {
-  theme: {
-    fontFamily: {
-      'heading': ['Work Sans', 'sans']
-    }
-  },
   plugins: [
     require('tailwindcss-dark-mode')()
   ],

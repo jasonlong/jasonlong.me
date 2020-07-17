@@ -7,7 +7,7 @@ export default function Hero() {
         alt="Jason Long profile photo"
       />
 
-      <h1 className="font-heading tracking-tight text-4xl sm:text-5xl md:text-6xl font-bold leading-tight dark:text-gray-100">
+      <h1 className="font-black tracking-tight text-4xl sm:text-5xl md:text-6xl leading-tight dark:text-gray-100">
         Hi. I'm Jason.
       </h1>
       <h2 className="sm:text-xl md:text-2xl text-gray-700 dark:text-gray-400">
