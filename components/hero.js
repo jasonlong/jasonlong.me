@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <div className="mb-6 md:mb-8">
       <img
-        src="/images/profile.jpg"
+        src="/images/profile.webp"
         className="rounded-full w-16 md:w-24 mb-4"
         alt="Jason Long profile photo"
       />
