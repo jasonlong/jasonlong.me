@@ -1,11 +1,11 @@
 export default function Hero() {
   return (
     <div className="mb-6 md:mb-8">
-      <img
-        src="/images/profile.webp"
-        className="rounded-full w-16 md:w-24 mb-4"
-        alt="Jason Long profile photo"
-      />
+      <picture>
+        <source srcSet={require('../public/images/profile.jpg?webp?size=192')} type="image/webp"/>
+        <source srcSet={require('../public/images/profile.jpg?size=192')} type="image/jpeg"/>
+        <img src={require('../public/images/profile.jpg?size=192')} className="rounded-full w-16 md:w-24 mb-4" />
+      </picture>
 
       <h1 className="font-black tracking-tight text-4xl sm:text-5xl md:text-6xl leading-tight dark:text-gray-100">
         Hi. I'm Jason.
