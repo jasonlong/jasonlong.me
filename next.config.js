@@ -3,7 +3,7 @@ const optimizedImages = require('next-optimized-images');
 
 module.exports = withPlugins([
   [optimizedImages, {
-    /* config for next-optimized-images */
+    optimizeImagesInDev: true,
     mozjpeg: {
       quality: 85
     },
