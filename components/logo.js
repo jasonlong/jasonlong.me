@@ -31,7 +31,7 @@ export default function Logo() {
     )
   } else {
     return (
-      <div className="bg-gray-200" style={{width: '48px', height: '48px'}} />
+      <div style={{width: '48px', height: '48px'}} />
     )
   }
 
