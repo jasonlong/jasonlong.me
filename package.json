@@ -16,9 +16,11 @@
     "next-optimized-images": "^2.6.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-three-fiber": "^4.2.17",
     "react-toggle": "^4.1.1",
     "responsive-loader": "^1.2.0",
     "sharp": "^0.25.4",
+    "three": "^0.118.3",
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {

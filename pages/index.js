@@ -15,10 +15,8 @@ export default function IndexPage() {
         <script async defer data-domain="jasonlong.me" src="https://plausible.io/js/plausible.js"></script>
       </Head>
 
-      <div className="dark:bg-gray-900 container flex flex-col pt-24 h-screen text-gray-900 px-6 text-left xl:text-left max-w-2xl md:max-w-3xl mx-auto">
-
+      <div className="dark:bg-gray-900 container flex flex-col pt-16 h-screen text-gray-900 px-6 text-left xl:text-left max-w-2xl md:max-w-3xl mx-auto">
         <Hero />
-
         <div className="flex mt-4 md:mt-6">
           <SocialMediaIcon icon="GitHub" url="https://github.com/jasonlong" />
           <SocialMediaIcon icon="Twitter" url="https://twitter.com/jasonlong" />
