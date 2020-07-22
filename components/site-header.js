@@ -1,5 +1,6 @@
 import { useDarkMode } from 'next-dark-mode'
 import Toggle from 'react-toggle'
+import Logo from '../components/logo'
 import Sun from '../components/sun'
 import Moon from '../components/moon'
 
@@ -13,7 +14,7 @@ export default function SiteHeader() {
 
   return (
     <div className="flex justify-between items-center px-8 py-4">
-      <img src="images/logo.svg" />
+      <Logo />
 
       <Toggle
         checked={darkModeActive}
