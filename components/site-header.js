@@ -12,10 +12,9 @@ export default function SiteHeader() {
   }
 
   return (
-    <>
-    <img src="images/logo.svg" className="pl-8" />
+    <div className="flex justify-between items-center px-8 py-4">
+      <img src="images/logo.svg" />
 
-    <div className="pr-8 text-right">
       <Toggle
         checked={darkModeActive}
         icons={{
@@ -25,6 +24,5 @@ export default function SiteHeader() {
         aria-label='Toggle light and dark modes'
         onChange={toggleMode} />
     </div>
-    </>
   )
 }

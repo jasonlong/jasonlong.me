@@ -8,7 +8,7 @@ export default function Layout({ children }) {
 
   return (
     <div className={`mode-${darkModeActive ? 'dark' : 'light'}`}>
-      <div className="pt-8 bg-white dark:bg-gray-900">
+      <div className="bg-white dark:bg-gray-900">
         <SiteHeader />
         {children}
       </div>
