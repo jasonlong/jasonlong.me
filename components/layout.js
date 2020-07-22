@@ -9,8 +9,10 @@ export default function Layout({ children }) {
   return (
     <div className={`mode-${darkModeActive ? 'dark' : 'light'}`}>
       <div className="bg-white dark:bg-gray-900">
-        <SiteHeader />
-        {children}
+        <div className="container mx-auto">
+          <SiteHeader />
+          {children}
+        </div>
       </div>
     </div>
   )

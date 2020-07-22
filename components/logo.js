@@ -19,6 +19,7 @@ export default function Logo() {
     return (
       <div style={{width: '48px', height: '48px'}}>
         <Canvas
+          invalidateFrameloop={true}
           pixelRatio={window.devicePixelRatio > 1 ? 2 : 1}
           orthographic={true}
           camera={{ position: [1000, 1000, 1000], near: 1, far: 5000 }}
