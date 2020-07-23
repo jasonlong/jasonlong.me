@@ -4,7 +4,12 @@ import Toggle from 'react-toggle'
 import Sun from '../components/sun'
 import Moon from '../components/moon'
 
-const Logo = dynamic(() => import('../components/logo'), { ssr: false })
+const Logo = dynamic(
+  () => import('../components/logo'), {
+    loading: () => <div style={{width: '90px', height: '90px'}}></div>,
+    ssr: false
+  }
+)
 
 export default function SiteHeader() {
   const { darkModeActive, switchToDarkMode, switchToLightMode } = useDarkMode()

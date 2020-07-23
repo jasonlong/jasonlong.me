@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import { useDarkMode } from 'next-dark-mode'
 import { Canvas, useThree, useFrame } from 'react-three-fiber'
-import { Suspense, useRef, useMemo, useEffect } from "react"
+import { Suspense, useState, useRef, useMemo, useEffect } from "react"
 import * as THREE from 'three'
 
 let EffectComposer, RenderPass, ShaderPass, UnrealBloomPass, FXAAShader
@@ -115,7 +115,6 @@ function Bloom() {
     gl.setClearColor( 0x000000, 0 );
 
     var renderScene = new RenderPass( scene, camera )
-    // var bloomPass = new UnrealBloomPass( new THREE.Vector2( size.width, size.height ), 1.15, 1.2, 0.45 )
     var bloomPass = new UnrealBloomPass( new THREE.Vector2( size.width, size.height ), 1.7, 0.5, 0 )
     var composer = new EffectComposer( gl )
     composer.addPass( renderScene )
@@ -136,15 +135,21 @@ function Bloom() {
 
 export default function Logo() {
   const { darkModeActive } = useDarkMode()
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
 
   if (typeof window !== 'undefined') {
     return (
-      <div style={{width: '90px', height: '90px', mixBlendMode: darkModeActive ? 'lighten' : 'normal'}}>
+      <div className={`${!loaded ? "opacity-0" : ""} transition-opacity delay-500 duration-500`} style={{width: '90px', height: '90px', mixBlendMode: darkModeActive ? 'lighten' : 'normal'}}>
         <Canvas
           invalidateFrameloop={true}
           pixelRatio={window.devicePixelRatio > 1 ? 2 : 1}
           orthographic={true}
           camera={{ position: [1000, 1000, 1000], near: 1, far: 5000 }}
+          noEvents={true}
         >
           <Model dark={darkModeActive} />
           { darkModeActive && <Bloom /> }
@@ -153,7 +158,7 @@ export default function Logo() {
     )
   } else {
     return (
-      <div style={{width: '48px', height: '48px'}} />
+      <div style={{width: '90px', height: '90px'}}></div>
     )
   }
 }
