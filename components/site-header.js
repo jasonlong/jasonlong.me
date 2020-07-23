@@ -1,8 +1,10 @@
+import dynamic from 'next/dynamic'
 import { useDarkMode } from 'next-dark-mode'
 import Toggle from 'react-toggle'
-import Logo from '../components/logo'
 import Sun from '../components/sun'
 import Moon from '../components/moon'
+
+const Logo = dynamic(() => import('../components/logo'), { ssr: false })
 
 export default function SiteHeader() {
   const { darkModeActive, switchToDarkMode, switchToLightMode } = useDarkMode()
