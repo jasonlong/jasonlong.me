@@ -1,5 +1,6 @@
 import '../styles/index.css'
 import '../styles/toggle.css'
+import '../styles/logo.css'
 import App from 'next/app'
 import withDarkMode, { useDarkMode } from 'next-dark-mode'
 
