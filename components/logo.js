@@ -112,8 +112,6 @@ function Bloom() {
   const { gl, scene, camera, size } = useThree()
 
   const bloom  = useMemo(() => {
-    gl.setClearColor( 0x000000, 0 );
-
     var renderScene = new RenderPass( scene, camera )
     var bloomPass = new UnrealBloomPass( new THREE.Vector2( size.width, size.height ), 1.7, 0.5, 0 )
     var composer = new EffectComposer( gl )
@@ -143,7 +141,9 @@ export default function Logo() {
 
   if (typeof window !== 'undefined') {
     return (
-      <div className={`${!loaded ? "opacity-0" : ""} transition-opacity delay-500 duration-500`} style={{width: '90px', height: '90px', mixBlendMode: darkModeActive ? 'lighten' : 'normal'}}>
+      <div
+        className= {`logo ${loaded ? "loaded" : ""}`}
+        style = {{width: '90px', height: '90px'}}>
         <Canvas
           invalidateFrameloop={true}
           pixelRatio={window.devicePixelRatio > 1 ? 2 : 1}

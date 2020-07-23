@@ -1,0 +1,24 @@
+.logo {
+  @apply opacity-0;
+  @apply transition-opacity;
+  @apply duration-1000;
+  @apply delay-500;
+}
+
+.logo.loaded {
+  @apply opacity-100;
+}
+
+.mode-dark .logo {
+  animation: flicker 1.5s linear 1;
+  mix-blend-mode: lighten;
+}
+
+@keyframes flicker {
+    0%, 50% {
+      opacity: 0.03;
+    }
+    100% {
+      opacity: 100%;
+    }
+}
