@@ -7,10 +7,10 @@ export default function Hero() {
         <img src={require('../public/images/profile.jpg')} className="rounded-full w-16 md:w-24 mb-4" alt="Jason Long profile picture" />
       </picture>
 
-      <h1 className="font-black tracking-tight text-4xl sm:text-5xl md:text-6xl leading-tight dark:text-gray-100">
+      <h1 className="font-black tracking-tight text-5xl md:text-6xl leading-tight dark:text-gray-100">
         Hi. I'm Jason.
       </h1>
-      <h2 className="sm:text-xl md:text-2xl text-gray-700 dark:text-gray-400">
+      <h2 className="text-2xl text-gray-700 dark:text-gray-400">
         de·sign·erd <span className="text-gray-600 dark:text-gray-500">| \ di-ˈzī-nərd \</span>
       </h2>
       <p className="text-sm md:text-base text-gray-700 dark:text-gray-500">
