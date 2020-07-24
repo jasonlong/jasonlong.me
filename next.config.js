@@ -9,6 +9,9 @@ module.exports = withPlugins([
     },
     optipng: {},
     webp: {},
-    responsiveLoader: {}
+    responsiveLoader: {},
+    imageTrace: {
+      color: 'rgba(0, 0, 0, 0.2)'
+    }
   }]
 ]);
