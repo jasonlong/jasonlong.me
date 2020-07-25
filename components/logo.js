@@ -4,7 +4,7 @@
 
 import { useDarkMode } from 'next-dark-mode'
 import { Canvas, useThree, useFrame } from 'react-three-fiber'
-import { useState, useMemo, useEffect } from 'react'
+import { useMemo, useEffect } from 'react'
 import * as THREE from 'three'
 
 let EffectComposer
@@ -138,16 +138,11 @@ function Bloom() {
 
 export default function Logo() {
   const { darkModeActive } = useDarkMode()
-  const [loaded, setLoaded] = useState(false)
-
-  useEffect(() => {
-    setLoaded(true)
-  }, [])
 
   if (typeof window !== 'undefined') {
     return (
       <div
-        className={`logo ${loaded ? 'loaded' : ''}`}
+        className="logo"
         style={{ width: '90px', height: '90px' }}
       >
         <Canvas
