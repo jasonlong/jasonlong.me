@@ -1,7 +1,5 @@
-import React, { Component, Fragment } from "react"
 import { useDarkMode } from 'next-dark-mode'
-import Logo from '../components/logo'
-import SiteHeader from '../components/site-header'
+import SiteHeader from './site-header'
 
 export default function Layout({ children }) {
   const { darkModeActive } = useDarkMode()
@@ -17,4 +15,3 @@ export default function Layout({ children }) {
     </div>
   )
 }
-
