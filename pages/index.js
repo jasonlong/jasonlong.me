@@ -18,7 +18,7 @@ export default function IndexPage() {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       </Head>
 
-      <div className="bg-white dark:bg-gray-900 container flex flex-col pt-8 h-screen text-gray-900 px-6 text-left xl:text-left max-w-2xl md:max-w-3xl mx-auto">
+      <div className="bg-white dark:bg-gray-900 container flex flex-col pt-8 text-gray-900 px-6 text-left xl:text-left max-w-2xl md:max-w-3xl mx-auto">
         <Hero />
 
         <div className="flex mt-4 md:mt-6">
