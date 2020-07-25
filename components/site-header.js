@@ -3,7 +3,7 @@ import { useDarkMode } from 'next-dark-mode'
 import Toggle from 'react-toggle'
 import Sun from './sun'
 import Moon from './moon'
-import SocialMediaIcon from './social-media-icon'
+import SocialMediaIcons from './social-media-icons'
 
 const Logo = dynamic(
   () => import('../components/logo'), {
@@ -26,9 +26,7 @@ export default function SiteHeader() {
 
       <div className="flex flex-row items-center">
         <div className="flex flex-row mr-4">
-          <SocialMediaIcon icon="GitHub" url="https://github.com/jasonlong" />
-          <SocialMediaIcon icon="Twitter" url="https://twitter.com/jasonlong" />
-          <SocialMediaIcon icon="Dribbble" url="https://dribbble.com/jasonlong" />
+          <SocialMediaIcons />
         </div>
 
         <Toggle
