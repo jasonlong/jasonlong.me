@@ -1,3 +1,5 @@
+/* eslint-disable object-curly-newline */
+
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
