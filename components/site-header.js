@@ -1,12 +1,12 @@
 import dynamic from 'next/dynamic'
 import { useDarkMode } from 'next-dark-mode'
 import Toggle from 'react-toggle'
-import Sun from '../components/sun'
-import Moon from '../components/moon'
+import Sun from './sun'
+import Moon from './moon'
 
 const Logo = dynamic(
   () => import('../components/logo'), {
-    loading: () => <div style={{width: '90px', height: '90px'}}></div>,
+    loading: () => <div style={{ width: '90px', height: '90px' }} />,
     ssr: false
   }
 )
@@ -29,8 +29,9 @@ export default function SiteHeader() {
           checked: <Moon />,
           unchecked: <Sun />
         }}
-        aria-label='Toggle light and dark modes'
-        onChange={toggleMode} />
+        aria-label="Toggle light and dark modes"
+        onChange={toggleMode}
+      />
     </div>
   )
 }

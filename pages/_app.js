@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-props-no-spreading */
+
 import '../styles/index.css'
 import '../styles/toggle.css'
 import '../styles/logo.css'
-import App from 'next/app'
 import withDarkMode, { useDarkMode } from 'next-dark-mode'
 
 function MyApp({ Component, pageProps }) {
