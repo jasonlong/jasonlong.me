@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Logos from '../components/logos'
-import SocialMediaIcon from '../components/social-media-icon'
 
 export default function IndexPage() {
   return (
@@ -18,15 +17,7 @@ export default function IndexPage() {
 
       <div className="bg-white dark:bg-gray-900 flex flex-col pt-8 text-gray-900 text-left xl:text-left">
         <Hero />
-
-        <div className="px-8 flex mt-4 md:mt-6">
-          <SocialMediaIcon icon="GitHub" url="https://github.com/jasonlong" />
-          <SocialMediaIcon icon="Twitter" url="https://twitter.com/jasonlong" />
-          <SocialMediaIcon icon="Dribbble" url="https://dribbble.com/jasonlong" />
-        </div>
-
         <Logos />
-
       </div>
 
     </Layout>
