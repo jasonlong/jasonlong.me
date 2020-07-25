@@ -3,7 +3,7 @@
 
 export default function Hero() {
   return (
-    <div className="mb-6 md:mb-8">
+    <div className="px-8 mb-6 md:mb-8">
       <picture>
         <source srcSet={require('../public/images/profile.jpg?webp')} type="image/webp" />
         <source srcSet={require('../public/images/profile.jpg?')} type="image/jpeg" />

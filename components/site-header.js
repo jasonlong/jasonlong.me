@@ -20,7 +20,7 @@ export default function SiteHeader() {
   }
 
   return (
-    <div className="flex justify-between items-center py-4 px-6">
+    <div className="flex justify-between items-center py-4 px-8">
       <Logo />
 
       <Toggle
