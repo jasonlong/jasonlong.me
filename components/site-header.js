@@ -5,12 +5,10 @@ import Sun from './sun'
 import Moon from './moon'
 import SocialMediaIcons from './social-media-icons'
 
-const Logo = dynamic(
-  () => import('../components/logo'), {
-    loading: () => <div style={{ width: '90px', height: '90px' }} />,
-    ssr: false
-  }
-)
+const Logo = dynamic(() => import('../components/logo'), {
+  loading: () => <div style={{ width: '90px', height: '90px' }} />,
+  ssr: false
+})
 
 export default function SiteHeader() {
   const { darkModeActive, switchToDarkMode, switchToLightMode } = useDarkMode()
