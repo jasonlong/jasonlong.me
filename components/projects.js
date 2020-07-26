@@ -5,17 +5,17 @@ import gitLogo from '../public/images/logos/git.png?trace'
 import libgit2Logo from '../public/images/logos/libgit2.png?trace'
 import neovimLogo from '../public/images/logos/neovim.png?trace'
 import tmuxLogo from '../public/images/logos/tmux.png?trace'
-import PaintIcon from './paint-icon'
+import TerminalIcon from './terminal-icon'
 
-export default function Logos() {
+export default function Projects() {
   return (
     <>
       <div className="rounded-full bg-gray-200 dark:bg-gray-800 w-16 md:w-20 p-5 md:p-6 text-gray-800 dark:text-gray-200 mx-auto mt-12">
-        <PaintIcon />
+        <TerminalIcon />
       </div>
 
       <h2 className="text-center pb-4 px-8 mt-4 mb-4 text-large md:text-xl font-black dark:text-gray-100">
-        Logos I&apos;ve designed for open source projects
+        Some of my side projects
       </h2>
 
       <div className="mb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
