@@ -15,7 +15,7 @@ export default function Logos() {
       </div>
 
       <h2 className="text-center pb-4 px-8 mt-4 mb-4 text-large md:text-xl font-black dark:text-gray-100">
-        Logos I&apos;ve designed for open source projects
+        I&apos;ve designed some logos for open source projects.
       </h2>
 
       <div className="mb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">

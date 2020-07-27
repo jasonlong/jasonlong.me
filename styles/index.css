@@ -1,18 +1,11 @@
 @tailwind base;
-@tailwind components;
 
-.btn-blue {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+a {
+  @apply text-blue-500;
 }
 
-.hero {
-  @apply py-20;
-}
-
-.title {
-  @apply text-5xl text-center;
-  color: #333;
-  line-height: 1.15;
+a:hover {
+  @apply text-blue-600;
 }
 
 @tailwind utilities;

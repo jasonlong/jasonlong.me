@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
+import About from '../components/about'
 import Logos from '../components/logos'
 
 export default function IndexPage() {
@@ -32,6 +33,7 @@ export default function IndexPage() {
 
       <div className="bg-white dark:bg-gray-900 flex flex-col pt-8 text-gray-900 text-left xl:text-left">
         <Hero />
+        <About />
         <Logos />
       </div>
     </Layout>
