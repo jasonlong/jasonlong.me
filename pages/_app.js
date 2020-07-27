@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     darkModeActive,
     switchToAutoMode,
     switchToDarkMode,
-    switchToLightMode,
+    switchToLightMode
   } = useDarkMode()
 
   return <Component {...pageProps} />

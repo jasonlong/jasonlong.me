@@ -19,57 +19,57 @@ function Model({ dark }) {
 
   if (dark) {
     jMatArray = useMemo(() => [
-      new THREE.MeshBasicMaterial({ color: 0x7F49DE }),
-      new THREE.MeshBasicMaterial({ color: 0x7F49DE }),
-      new THREE.MeshBasicMaterial({ color: 0x9064DD }),
-      new THREE.MeshBasicMaterial({ color: 0x9064DD }),
-      new THREE.MeshBasicMaterial({ color: 0x6421DE }),
-      new THREE.MeshBasicMaterial({ color: 0x6421DE })
+      new THREE.MeshBasicMaterial({ color: 0x7f49de }),
+      new THREE.MeshBasicMaterial({ color: 0x7f49de }),
+      new THREE.MeshBasicMaterial({ color: 0x9064dd }),
+      new THREE.MeshBasicMaterial({ color: 0x9064dd }),
+      new THREE.MeshBasicMaterial({ color: 0x6421de }),
+      new THREE.MeshBasicMaterial({ color: 0x6421de })
     ])
 
     midMatArray = useMemo(() => [
-      new THREE.MeshBasicMaterial({ color: 0x0E35E9 }),
-      new THREE.MeshBasicMaterial({ color: 0x0E35E9 }),
-      new THREE.MeshBasicMaterial({ color: 0x6C55F9 }),
-      new THREE.MeshBasicMaterial({ color: 0x6C55F9 }),
-      new THREE.MeshBasicMaterial({ color: 0x6421DE }),
-      new THREE.MeshBasicMaterial({ color: 0x6421DE })
+      new THREE.MeshBasicMaterial({ color: 0x0e35e9 }),
+      new THREE.MeshBasicMaterial({ color: 0x0e35e9 }),
+      new THREE.MeshBasicMaterial({ color: 0x6c55f9 }),
+      new THREE.MeshBasicMaterial({ color: 0x6c55f9 }),
+      new THREE.MeshBasicMaterial({ color: 0x6421de }),
+      new THREE.MeshBasicMaterial({ color: 0x6421de })
     ])
 
     lMatArray = useMemo(() => [
-      new THREE.MeshBasicMaterial({ color: 0x0E35E9 }),
-      new THREE.MeshBasicMaterial({ color: 0x0E35E9 }),
-      new THREE.MeshBasicMaterial({ color: 0x4B74F1 }),
-      new THREE.MeshBasicMaterial({ color: 0x4B74F1 }),
-      new THREE.MeshBasicMaterial({ color: 0xD53F8C }),
-      new THREE.MeshBasicMaterial({ color: 0xD53F8C })
+      new THREE.MeshBasicMaterial({ color: 0x0e35e9 }),
+      new THREE.MeshBasicMaterial({ color: 0x0e35e9 }),
+      new THREE.MeshBasicMaterial({ color: 0x4b74f1 }),
+      new THREE.MeshBasicMaterial({ color: 0x4b74f1 }),
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c })
     ])
   } else {
     jMatArray = useMemo(() => [
-      new THREE.MeshBasicMaterial({ color: 0xED64A6 }),
-      new THREE.MeshBasicMaterial({ color: 0xED64A6 }),
-      new THREE.MeshBasicMaterial({ color: 0xF687B3 }),
-      new THREE.MeshBasicMaterial({ color: 0xF687B3 }),
-      new THREE.MeshBasicMaterial({ color: 0xD53F8C }),
-      new THREE.MeshBasicMaterial({ color: 0xD53F8C })
+      new THREE.MeshBasicMaterial({ color: 0xed64a6 }),
+      new THREE.MeshBasicMaterial({ color: 0xed64a6 }),
+      new THREE.MeshBasicMaterial({ color: 0xf687b3 }),
+      new THREE.MeshBasicMaterial({ color: 0xf687b3 }),
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c })
     ])
 
     midMatArray = useMemo(() => [
-      new THREE.MeshBasicMaterial({ color: 0x667EEA }),
-      new THREE.MeshBasicMaterial({ color: 0x667EEA }),
-      new THREE.MeshBasicMaterial({ color: 0xB794F4 }),
-      new THREE.MeshBasicMaterial({ color: 0xB794F4 }),
-      new THREE.MeshBasicMaterial({ color: 0xD53F8C }),
-      new THREE.MeshBasicMaterial({ color: 0xD53F8C })
+      new THREE.MeshBasicMaterial({ color: 0x667eea }),
+      new THREE.MeshBasicMaterial({ color: 0x667eea }),
+      new THREE.MeshBasicMaterial({ color: 0xb794f4 }),
+      new THREE.MeshBasicMaterial({ color: 0xb794f4 }),
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c })
     ])
 
     lMatArray = useMemo(() => [
-      new THREE.MeshBasicMaterial({ color: 0x667EEA }),
-      new THREE.MeshBasicMaterial({ color: 0x667EEA }),
-      new THREE.MeshBasicMaterial({ color: 0x7F9CF5 }),
-      new THREE.MeshBasicMaterial({ color: 0x7F9CF5 }),
-      new THREE.MeshBasicMaterial({ color: 0xD53F8C }),
-      new THREE.MeshBasicMaterial({ color: 0xD53F8C })
+      new THREE.MeshBasicMaterial({ color: 0x667eea }),
+      new THREE.MeshBasicMaterial({ color: 0x667eea }),
+      new THREE.MeshBasicMaterial({ color: 0x7f9cf5 }),
+      new THREE.MeshBasicMaterial({ color: 0x7f9cf5 }),
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c })
     ])
   }
 
@@ -110,15 +110,23 @@ function Model({ dark }) {
 }
 
 function Bloom() {
-  EffectComposer = require('three/examples/jsm/postprocessing/EffectComposer').EffectComposer
-  UnrealBloomPass = require('three/examples/jsm/postprocessing/UnrealBloomPass').UnrealBloomPass
-  RenderPass = require('three/examples/jsm/postprocessing/RenderPass').RenderPass
+  EffectComposer = require('three/examples/jsm/postprocessing/EffectComposer')
+    .EffectComposer
+  UnrealBloomPass = require('three/examples/jsm/postprocessing/UnrealBloomPass')
+    .UnrealBloomPass
+  RenderPass = require('three/examples/jsm/postprocessing/RenderPass')
+    .RenderPass
 
   const { gl, scene, camera, size } = useThree()
 
   const bloom = useMemo(() => {
     const renderScene = new RenderPass(scene, camera)
-    const bloomPass = new UnrealBloomPass(new THREE.Vector2(size.width, size.height), 1.7, 0.5, 0)
+    const bloomPass = new UnrealBloomPass(
+      new THREE.Vector2(size.width, size.height),
+      1.7,
+      0.5,
+      0
+    )
     const composer = new EffectComposer(gl)
     composer.addPass(renderScene)
     composer.addPass(bloomPass)
@@ -141,10 +149,7 @@ export default function Logo() {
 
   if (typeof window !== 'undefined') {
     return (
-      <div
-        className="logo"
-        style={{ width: '90px', height: '90px' }}
-      >
+      <div className="logo" style={{ width: '90px', height: '90px' }}>
         <Canvas
           pixelRatio={window.devicePixelRatio > 1 ? 2 : 1}
           camera={{ position: [1000, 1000, 1000], near: 1, far: 5000 }}
@@ -153,13 +158,11 @@ export default function Logo() {
           noEvents
         >
           <Model dark={darkModeActive} />
-          { darkModeActive && <Bloom /> }
+          {darkModeActive && <Bloom />}
         </Canvas>
       </div>
     )
   } else {
-    return (
-      <div style={{ width: '90px', height: '90px' }} />
-    )
+    return <div style={{ width: '90px', height: '90px' }} />
   }
 }
