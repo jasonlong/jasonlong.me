@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import About from '../components/about'
 import Logos from '../components/logos'
+import Projects from '../components/projects'
 
 export default function IndexPage() {
   return (
@@ -35,6 +36,7 @@ export default function IndexPage() {
         <Hero />
         <About />
         <Logos />
+        <Projects />
       </div>
     </Layout>
   )
