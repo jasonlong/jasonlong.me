@@ -31,7 +31,7 @@ export default function IndexPage() {
         />
       </Head>
 
-      <div className="bg-white dark:bg-gray-900 flex flex-col pt-8 text-gray-900 text-left xl:text-left">
+      <div className="bg-white dark:bg-gray-900 flex flex-col text-gray-900 text-left xl:text-left">
         <Hero />
         <About />
         <Logos />
