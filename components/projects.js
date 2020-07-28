@@ -130,7 +130,7 @@ export default function Projects({ dark }) {
                 type="image/png"
               />
               <img
-                src={materPic.trace}
+                src={geoPic.trace}
                 alt="geo_pattern library"
                 className="rounded shadow-md"
               />
