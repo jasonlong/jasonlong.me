@@ -2,24 +2,17 @@
 /* eslint-disable global-require */
 /* eslint-disable react/jsx-one-expression-per-line */
 
+import Image from './image'
+
 export default function Projects() {
   return (
     <>
-      <picture>
-        <source
-          srcSet={require('../public/images/profile.jpg?webp')}
-          type="image/webp"
-        />
-        <source
-          srcSet={require('../public/images/profile.jpg?')}
-          type="image/jpeg"
-        />
-        <img
-          src={require('../public/images/profile.jpg')}
-          className="rounded-full w-16 md:w-20 mt-12 mx-auto"
-          alt="Jason Long"
-        />
-      </picture>
+      <Image
+        src="./images/profile.jpg"
+        type="image/jpeg"
+        classes="rounded-full w-16 md:w-20 mt-12 mx-auto"
+        alt="Jason Long"
+      />
 
       <h2 className="text-center pb-4 px-8 mt-4 text-large md:text-xl font-black dark:text-gray-100">
         I&apos;m a product designer.
