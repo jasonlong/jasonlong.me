@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default () => (
+const TwitterIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor">
     <g>
       <title>GitHub</title>
@@ -8,3 +8,5 @@ export default () => (
     </g>
   </svg>
 )
+
+export default TwitterIcon

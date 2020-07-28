@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default () => (
+const SunIcon = () => (
   <svg fill="currentColor" viewBox="0 0 20 20">
     <path
       fillRule="evenodd"
@@ -9,3 +9,5 @@ export default () => (
     />
   </svg>
 )
+
+export default SunIcon

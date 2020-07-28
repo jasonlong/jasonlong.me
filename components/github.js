@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default () => (
+const GitHubIcon = () => (
   <svg className="fill-current" viewBox="0 0 24 24">
     <g>
       <title>GitHub</title>
@@ -8,3 +8,5 @@ export default () => (
     </g>
   </svg>
 )
+
+export default GitHubIcon
