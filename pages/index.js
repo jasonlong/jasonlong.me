@@ -1,3 +1,4 @@
+import { useDarkMode } from 'next-dark-mode'
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
@@ -6,6 +7,8 @@ import Logos from '../components/logos'
 import Projects from '../components/projects'
 
 export default function IndexPage() {
+  const { darkModeActive } = useDarkMode()
+
   return (
     <Layout>
       <Head>
@@ -36,7 +39,7 @@ export default function IndexPage() {
         <Hero />
         <About />
         <Logos />
-        <Projects />
+        <Projects dark={darkModeActive} />
       </div>
     </Layout>
   )

@@ -2,9 +2,11 @@
 /* eslint-disable global-require */
 
 import isoPic from '../public/images/projects/isometric-contributions.png?trace'
+import materPic from '../public/images/projects/mater.png?trace'
+import materDarkPic from '../public/images/projects/mater-dark.png?trace'
 import TerminalIcon from './terminal-icon'
 
-export default function Projects() {
+export default function Projects({ dark }) {
   return (
     <>
       <div className="rounded-full bg-gray-200 dark:bg-gray-800 w-16 md:w-20 p-5 md:p-6 text-gray-800 dark:text-gray-200 mx-auto mt-12">
@@ -42,6 +44,55 @@ export default function Projects() {
             A browser extension that allows you view your GitHub contribution
             graph in 3D. Available for Chrome, Brave, and Firefox.
           </p>
+        </div>
+
+        <div className="px-8 py-6 md:py-0 flex flex-col justify-center">
+          <h3 className="font-bold text-xl">
+            <a href="https://github.com/jasonlong/mater">mater</a>
+          </h3>
+          <p className="text-gray-700 dark:text-gray-500">
+            A simple menubar app for using the{' '}
+            <a href="https://www.wikiwand.com/en/Pomodoro_Technique">
+              Pomorodoro Technique
+            </a>
+            . Works on macOS and Windows.
+          </p>
+        </div>
+        <div className="px-8 flex items-center">
+          {dark && (
+            <picture>
+              <source
+                srcSet={require('../public/images/projects/mater-dark.png?webp')}
+                type="image/webp"
+              />
+              <source
+                srcSet={require('../public/images/projects/mater-dark.png')}
+                type="image/png"
+              />
+              <img
+                src={materDarkPic.trace}
+                alt="Isometric Contributions browser extension"
+                className="rounded shadow-md"
+              />
+            </picture>
+          )}
+          {!dark && (
+            <picture>
+              <source
+                srcSet={require('../public/images/projects/mater-light.png?webp')}
+                type="image/webp"
+              />
+              <source
+                srcSet={require('../public/images/projects/mater-light.png')}
+                type="image/png"
+              />
+              <img
+                src={materPic.trace}
+                alt="Isometric Contributions browser extension"
+                className="rounded shadow-md"
+              />
+            </picture>
+          )}
         </div>
       </div>
     </>
