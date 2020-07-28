@@ -1,6 +1,6 @@
-import GitHub from './github'
-import Twitter from './twitter'
-import Dribbble from './dribbble'
+import GitHub from './icons/github'
+import Twitter from './icons/twitter'
+import Dribbble from './icons/dribbble'
 
 export default function SocialMediaIcons() {
   return (

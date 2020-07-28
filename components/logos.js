@@ -2,7 +2,7 @@
 /* eslint-disable global-require */
 
 import Image from './image'
-import PaintIcon from './paint-icon'
+import PaintIcon from './icons/paint-icon'
 
 export default function Logos() {
   return (

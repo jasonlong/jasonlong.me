@@ -7,8 +7,8 @@ import materPic from '../public/images/projects/mater.png?trace'
 import materDarkPic from '../public/images/projects/mater-dark.png?trace'
 import geoPic from '../public/images/projects/geo-light.png?trace'
 import geoDarkPic from '../public/images/projects/geo-dark.png?trace'
-import TerminalIcon from './terminal-icon'
-import StarIcon from './star'
+import TerminalIcon from './icons/terminal-icon'
+import StarIcon from './icons/star'
 
 const fetcher = url => fetch(url).then(res => res.json())
 
