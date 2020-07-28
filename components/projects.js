@@ -4,6 +4,8 @@
 import isoPic from '../public/images/projects/isometric-contributions.png?trace'
 import materPic from '../public/images/projects/mater.png?trace'
 import materDarkPic from '../public/images/projects/mater-dark.png?trace'
+import geoPic from '../public/images/projects/geo-light.png?trace'
+import geoDarkPic from '../public/images/projects/geo-dark.png?trace'
 import TerminalIcon from './terminal-icon'
 
 export default function Projects({ dark }) {
@@ -34,7 +36,6 @@ export default function Projects({ dark }) {
             />
           </picture>
         </div>
-
         <div className="px-8 py-6 md:py-0 flex flex-col justify-center w-full md:w-1/2">
           <h3 className="font-bold text-xl">
             <a href="https://github.com/jasonlong/isometric-contributions">
@@ -95,6 +96,55 @@ export default function Projects({ dark }) {
               Pomorodoro Technique
             </a>
             . Works on macOS and Windows.
+          </p>
+        </div>
+      </div>
+
+      <div className="mb-16 flex flex-col md:flex-row mb-16">
+        <div className="px-8 flex items-center w-full md:w-1/2">
+          {dark && (
+            <picture>
+              <source
+                srcSet={require('../public/images/projects/geo-dark.png?webp')}
+                type="image/webp"
+              />
+              <source
+                srcSet={require('../public/images/projects/geo-dark.png')}
+                type="image/png"
+              />
+              <img
+                src={geoDarkPic.trace}
+                alt="geo_pattern library"
+                className="rounded shadow-md"
+              />
+            </picture>
+          )}
+          {!dark && (
+            <picture>
+              <source
+                srcSet={require('../public/images/projects/geo-light.png?webp')}
+                type="image/webp"
+              />
+              <source
+                srcSet={require('../public/images/projects/geo-light.png')}
+                type="image/png"
+              />
+              <img
+                src={materPic.trace}
+                alt="geo_pattern library"
+                className="rounded shadow-md"
+              />
+            </picture>
+          )}
+        </div>
+        <div className="px-8 py-6 md:py-0 flex flex-col justify-center w-full md:w-1/2">
+          <h3 className="font-bold text-xl">
+            <a href="https://github.com/jasonlong/mater">geo_pattern</a>
+          </h3>
+          <p className="text-gray-700 dark:text-gray-500">
+            A tool for generating tiling SVG patterns from a string
+            procedurally. Written in Ruby with ports available for many other
+            languages.
           </p>
         </div>
       </div>
