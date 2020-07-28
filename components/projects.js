@@ -2,17 +2,14 @@
 /* eslint-disable global-require */
 
 import useSWR from 'swr'
-import isoPic from '../public/images/projects/isometric-contributions.png?trace'
-import materPic from '../public/images/projects/mater.png?trace'
-import materDarkPic from '../public/images/projects/mater-dark.png?trace'
-import geoPic from '../public/images/projects/geo-light.png?trace'
-import geoDarkPic from '../public/images/projects/geo-dark.png?trace'
 import TerminalIcon from './icons/terminal-icon'
 import StarIcon from './icons/star'
+import Image from './image'
+import getProjects from '../lib/projects'
 
 const fetcher = url => fetch(url).then(res => res.json())
 
-export default function Projects({ dark }) {
+export default function Projects({ allProjectsData, dark }) {
   const { dataIso } = useSWR(
     'https://api.github.com/repos/jasonlong/isometric-contributions',
     fetcher
@@ -38,22 +35,27 @@ export default function Projects({ dark }) {
         I have a few side projects.
       </h2>
 
+      {allProjectsData.map(({ id, pageOrder, title, url, imageSrc, imageSrcDark }) => (
+        <>
+          <p>{ id }</p>
+          <p>{ title }</p>
+          <p>{ pageOrder }</p>
+          <p>{ url }</p>
+          <p>{ title }</p>
+          <p>{ imageSrc }</p>
+          <p>{ imageSrcDark }</p>
+        </>
+      ))}
+
       <div className="mb-16 flex flex-col md:flex-row mb-16">
         <div className="px-8 flex items-center w-full md:w-1/2">
-          <picture className="p-2 bg-white rounded shadow-md border border-gray-200 dark:border-0">
-            <source
-              srcSet={require('../public/images/projects/isometric-contributions.png?webp')}
-              type="image/webp"
-            />
-            <source
-              srcSet={require('../public/images/projects/isometric-contributions.png')}
+          <div className="p-2 bg-white rounded shadow-md border border-gray-200 dark:border-0">
+            <Image
+              src="./images/projects/isometric-contributions.png"
               type="image/png"
-            />
-            <img
-              src={isoPic.trace}
               alt="Isometric Contributions browser extension"
             />
-          </picture>
+          </div>
         </div>
         <div className="text-gray-700 dark:text-gray-500 px-8 py-6 md:py-0 flex flex-col justify-center w-full md:w-1/2">
           <h3 className="font-bold text-xl">
@@ -77,38 +79,20 @@ export default function Projects({ dark }) {
       <div className="mb-16 flex flex-col md:flex-row-reverse mb-16">
         <div className="px-8 flex items-center w-full md:w-1/2">
           {dark && (
-            <picture>
-              <source
-                srcSet={require('../public/images/projects/mater-dark.png?webp')}
-                type="image/webp"
-              />
-              <source
-                srcSet={require('../public/images/projects/mater-dark.png')}
-                type="image/png"
-              />
-              <img
-                src={materDarkPic.trace}
-                alt="Isometric Contributions browser extension"
-                className="rounded shadow-md"
-              />
-            </picture>
+            <Image
+              src="./images/projects/mater-dark.png"
+              type="image/png"
+              alt="Mater pomodoro app"
+              classes="rounded shadow-md"
+            />
           )}
           {!dark && (
-            <picture>
-              <source
-                srcSet={require('../public/images/projects/mater-light.png?webp')}
-                type="image/webp"
-              />
-              <source
-                srcSet={require('../public/images/projects/mater-light.png')}
-                type="image/png"
-              />
-              <img
-                src={materPic.trace}
-                alt="Isometric Contributions browser extension"
-                className="rounded shadow-md"
-              />
-            </picture>
+            <Image
+              src="./images/projects/mater-light.png"
+              type="image/png"
+              alt="Mater pomodoro app"
+              classes="rounded shadow-md"
+            />
           )}
         </div>
         <div className="text-gray-700 dark:text-gray-500 px-8 py-6 md:py-0 flex flex-col justify-center w-full md:w-1/2">
@@ -134,38 +118,20 @@ export default function Projects({ dark }) {
       <div className="mb-16 flex flex-col md:flex-row mb-16">
         <div className="px-8 flex items-center w-full md:w-1/2">
           {dark && (
-            <picture>
-              <source
-                srcSet={require('../public/images/projects/geo-dark.png?webp')}
-                type="image/webp"
-              />
-              <source
-                srcSet={require('../public/images/projects/geo-dark.png')}
-                type="image/png"
-              />
-              <img
-                src={geoDarkPic.trace}
-                alt="geo_pattern library"
-                className="rounded shadow-md"
-              />
-            </picture>
+            <Image
+              src="./images/projects/geo-dark.png"
+              type="image/png"
+              alt="geo_pattern library"
+              classes="rounded shadow-md"
+            />
           )}
           {!dark && (
-            <picture>
-              <source
-                srcSet={require('../public/images/projects/geo-light.png?webp')}
-                type="image/webp"
-              />
-              <source
-                srcSet={require('../public/images/projects/geo-light.png')}
-                type="image/png"
-              />
-              <img
-                src={geoPic.trace}
-                alt="geo_pattern library"
-                className="rounded shadow-md"
-              />
-            </picture>
+            <Image
+              src="./images/projects/geo-light.png"
+              type="image/png"
+              alt="geo_pattern library"
+              classes="rounded shadow-md"
+            />
           )}
         </div>
         <div className="text-gray-700 dark:text-gray-500 px-8 py-6 md:py-0 flex flex-col justify-center w-full md:w-1/2">
@@ -187,4 +153,13 @@ export default function Projects({ dark }) {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const allProjectsData = getProjects()
+  return {
+    props: {
+      allProjectsData
+    }
+  }
 }

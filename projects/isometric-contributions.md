@@ -1,0 +1,7 @@
+---
+title: 'isometric-contributions'
+pageOrder: 1
+url: 'https://github.com/jasonlong/isometric-contributions'
+imageSrc: './images/projects/isometric-contributions.png'
+---
+A browser extension that allows you view your GitHub contribution graph in 3D. Available for Chrome, Brave, and Firefox.
