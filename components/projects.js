@@ -17,8 +17,8 @@ export default function Projects({ dark }) {
         I have a few side projects.
       </h2>
 
-      <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-0">
-        <div className="px-8 flex items-center">
+      <div className="mb-16 flex flex-col md:flex-row mb-16">
+        <div className="px-8 flex items-center w-full md:w-1/2">
           <picture className="p-2 bg-white rounded shadow-md border border-gray-200 dark:border-0">
             <source
               srcSet={require('../public/images/projects/isometric-contributions.png?webp')}
@@ -34,7 +34,8 @@ export default function Projects({ dark }) {
             />
           </picture>
         </div>
-        <div className="px-8 py-6 md:py-0 flex flex-col justify-center">
+
+        <div className="px-8 py-6 md:py-0 flex flex-col justify-center w-full md:w-1/2">
           <h3 className="font-bold text-xl">
             <a href="https://github.com/jasonlong/isometric-contributions">
               isometric-contributions
@@ -45,20 +46,10 @@ export default function Projects({ dark }) {
             graph in 3D. Available for Chrome, Brave, and Firefox.
           </p>
         </div>
+      </div>
 
-        <div className="px-8 py-6 md:py-0 flex flex-col justify-center">
-          <h3 className="font-bold text-xl">
-            <a href="https://github.com/jasonlong/mater">mater</a>
-          </h3>
-          <p className="text-gray-700 dark:text-gray-500">
-            A simple menubar app for using the{' '}
-            <a href="https://www.wikiwand.com/en/Pomodoro_Technique">
-              Pomorodoro Technique
-            </a>
-            . Works on macOS and Windows.
-          </p>
-        </div>
-        <div className="px-8 flex items-center">
+      <div className="mb-16 flex flex-col md:flex-row-reverse mb-16">
+        <div className="px-8 flex items-center w-full md:w-1/2">
           {dark && (
             <picture>
               <source
@@ -93,6 +84,18 @@ export default function Projects({ dark }) {
               />
             </picture>
           )}
+        </div>
+        <div className="px-8 py-6 md:py-0 flex flex-col justify-center w-full md:w-1/2">
+          <h3 className="font-bold text-xl">
+            <a href="https://github.com/jasonlong/mater">mater</a>
+          </h3>
+          <p className="text-gray-700 dark:text-gray-500">
+            A simple menubar app for using the{' '}
+            <a href="https://www.wikiwand.com/en/Pomodoro_Technique">
+              Pomorodoro Technique
+            </a>
+            . Works on macOS and Windows.
+          </p>
         </div>
       </div>
     </>
