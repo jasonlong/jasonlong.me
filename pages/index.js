@@ -9,7 +9,7 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import About from '../components/about'
 import Logos from '../components/logos'
-import Project from '../components/project'
+import Projects from '../components/projects'
 
 export default function IndexPage({ projects }) {
   const { darkModeActive } = useDarkMode()
@@ -29,10 +29,7 @@ export default function IndexPage({ projects }) {
         <Hero />
         <About />
         <Logos />
-
-        {projects.map((project, i) => (
-          <Project key={project.fileName} content={project} dark={darkModeActive} reverse={i % 2} />
-        ))}
+        <Projects projects={projects} dark={darkModeActive} />
       </div>
     </Layout>
   )
