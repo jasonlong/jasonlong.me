@@ -6,5 +6,6 @@ apiUrl: 'https://api.github.com/repos/jasonlong/isometric-contributions'
 imageSrc: './images/projects/isometric-contributions.png'
 imageSrcDark: './images/projects/isometric-contributions.png'
 imageType: 'image/png'
+imageBorder: true
 ---
 A browser extension that allows you view your GitHub contribution graph in 3D. Available for Chrome, Brave, and Firefox.

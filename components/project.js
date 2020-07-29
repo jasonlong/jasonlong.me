@@ -21,12 +21,18 @@ export default function Project({ content, dark, reverse }) {
      }
     >
       <div className="px-8 flex items-center w-full md:w-1/2">
-        <div className="p-2 bg-white rounded shadow-md border border-gray-200 dark:border-0">
+        <div className={
+          classNames({
+            "p-2 bg-white rounded shadow-md  border border-gray-200 dark:border-0": content.imageBorder
+          })
+         }
+        >
           {dark && (
             <Image
               src={content.imageSrcDark}
               type={content.imageType}
               alt={content.title}
+              classes={!content.imageBorder ? "rounded shadow-md" : ""}
             />
           )}
           {!dark && (
@@ -34,6 +40,7 @@ export default function Project({ content, dark, reverse }) {
               src={content.imageSrc}
               type={content.imageType}
               alt={content.title}
+              classes={!content.imageBorder ? "rounded shadow-md" : ""}
             />
           )}
         </div>
