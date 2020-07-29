@@ -27,22 +27,24 @@ export default function Project({ content, dark, reverse }) {
           })
          }
         >
-          {dark && (
-            <Image
-              src={content.imageSrcDark}
-              type={content.imageType}
-              alt={content.title}
-              classes={!content.imageBorder ? "rounded shadow-md" : ""}
-            />
-          )}
-          {!dark && (
-            <Image
-              src={content.imageSrc}
-              type={content.imageType}
-              alt={content.title}
-              classes={!content.imageBorder ? "rounded shadow-md" : ""}
-            />
-          )}
+          <a href={content.url}>
+            {dark && (
+              <Image
+                src={content.imageSrcDark}
+                type={content.imageType}
+                alt={content.title}
+                classes={!content.imageBorder ? "rounded shadow-md" : ""}
+              />
+            )}
+            {!dark && (
+              <Image
+                src={content.imageSrc}
+                type={content.imageType}
+                alt={content.title}
+                classes={!content.imageBorder ? "rounded shadow-md" : ""}
+              />
+            )}
+          </a>
         </div>
       </div>
       <div className="text-gray-700 dark:text-gray-500 px-8 py-6 md:py-0 flex flex-col justify-center w-full md:w-1/2">
