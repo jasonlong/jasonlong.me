@@ -5,7 +5,6 @@ import useSWR from 'swr'
 import TerminalIcon from './icons/terminal-icon'
 import StarIcon from './icons/star'
 import Image from './image'
-import getProjects from '../lib/projects'
 
 const fetcher = url => fetch(url).then(res => res.json())
 
@@ -34,18 +33,6 @@ export default function Projects({ allProjectsData, dark }) {
       <h2 className="text-center pb-4 px-8 mt-4 mb-4 text-large md:text-xl font-black dark:text-gray-100">
         I have a few side projects.
       </h2>
-
-      {allProjectsData.map(({ id, pageOrder, title, url, imageSrc, imageSrcDark }) => (
-        <>
-          <p>{ id }</p>
-          <p>{ title }</p>
-          <p>{ pageOrder }</p>
-          <p>{ url }</p>
-          <p>{ title }</p>
-          <p>{ imageSrc }</p>
-          <p>{ imageSrcDark }</p>
-        </>
-      ))}
 
       <div className="mb-16 flex flex-col md:flex-row mb-16">
         <div className="px-8 flex items-center w-full md:w-1/2">
@@ -153,13 +140,4 @@ export default function Projects({ allProjectsData, dark }) {
       </div>
     </>
   )
-}
-
-export async function getStaticProps() {
-  const allProjectsData = getProjects()
-  return {
-    props: {
-      allProjectsData
-    }
-  }
 }
