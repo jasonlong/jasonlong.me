@@ -1,9 +1,17 @@
+import useSWR from 'swr'
 import Image from './image'
 import StarIcon from './icons/star'
 
 const classNames = require('classnames')
 
+const fetcher = url => fetch(url).then(res => res.json())
+
 export default function Project({ content, dark, reverse }) {
+  const { data } = useSWR(
+    content.apiUrl,
+    fetcher
+  )
+
   return (
     <div className={
       classNames('mb-16 flex flex-col', {
@@ -41,7 +49,7 @@ export default function Project({ content, dark, reverse }) {
         </p>
         <p className="mt-4">
           <StarIcon size={16} />
-          <span className="inline-block align-middle ml-2">TODO</span>
+          <span className="inline-block align-middle ml-2">{data && data.stargazers_count}</span>
         </p>
       </div>
     </div>
