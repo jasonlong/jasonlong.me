@@ -1,28 +1,10 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable global-require */
 
-import useSWR from 'swr'
 import TerminalIcon from './icons/terminal-icon'
 import Project from './project'
 
-const fetcher = url => fetch(url).then(res => res.json())
-
 export default function Projects({ projects, dark }) {
-  const { dataIso } = useSWR(
-    'https://api.github.com/repos/jasonlong/isometric-contributions',
-    fetcher
-  )
-
-  const { dataMater } = useSWR(
-    'https://api.github.com/repos/jasonlong/mater',
-    fetcher
-  )
-
-  const { dataGeo } = useSWR(
-    'https://api.github.com/repos/jasonlong/geo_pattern',
-    fetcher
-  )
-
   return (
     <>
       <div className="rounded-full bg-gray-200 dark:bg-gray-800 w-16 md:w-20 p-5 md:p-6 text-gray-800 dark:text-gray-200 mx-auto mt-12">
