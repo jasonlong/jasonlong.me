@@ -52,6 +52,14 @@ export async function getStaticProps() {
     }
   })
 
+  projects.sort((a, b) => {
+    if (a.pageOrder > b.pageOrder) {
+      return 1
+    } else {
+      return -1
+    }
+  })
+
   return {
     props: {
       projects
