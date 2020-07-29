@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic'
 import { useDarkMode } from 'next-dark-mode'
 import Toggle from 'react-toggle'
-import Sun from './sun'
-import Moon from './moon'
+import Sun from './icons/sun'
+import Moon from './icons/moon'
 import SocialMediaIcons from './social-media-icons'
 
 const Logo = dynamic(() => import('../components/logo'), {
