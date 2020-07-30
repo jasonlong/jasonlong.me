@@ -19,7 +19,7 @@ export default function SiteHeader() {
   }
 
   return (
-    <div className="flex justify-between items-center py-4 px-8">
+    <div className="max-w-screen-xl mx-auto flex justify-between items-center py-4 px-8 xl:px-0">
       <Logo />
 
       <div className="flex flex-row items-center">
