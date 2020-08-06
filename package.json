@@ -36,6 +36,6 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "2.0.5",
     "tailwindcss": "^1.6.2",
-    "tailwindcss-dark-mode": "^1.1.5"
+    "tailwindcss-dark-mode": "^1.1.6"
   }
 }
