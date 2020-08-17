@@ -2,7 +2,7 @@
 
 WIP personal site
 
-Using/learning:
+Using / learning:
 
 * Next.js
 * Tailwind CSS
