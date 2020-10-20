@@ -21,7 +21,7 @@
     "react-three-fiber": "^5.0.6",
     "react-toggle": "^4.1.1",
     "responsive-loader": "^1.2.0",
-    "swr": "^0.3.5",
+    "swr": "^0.3.6",
     "three": "^0.121.1",
     "webp-loader": "^0.6.0"
   },
