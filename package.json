@@ -35,7 +35,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "2.1.2",
-    "tailwindcss": "^1.9.5",
+    "tailwindcss": "^1.9.6",
     "tailwindcss-dark-mode": "^1.1.7"
   }
 }
