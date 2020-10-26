@@ -16,7 +16,7 @@
     "next-compose-plugins": "^2.2.0",
     "next-dark-mode": "^2.3.0",
     "next-optimized-images": "^2.6.2",
-    "react": "^16.14.0",
+    "react": "^17.0.1",
     "react-dom": "^16.14.0",
     "react-three-fiber": "^5.0.6",
     "react-toggle": "^4.1.1",
