@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import Image from './image'
+import Image from 'next/image'
 import StarIcon from './icons/star'
 
 const classNames = require('classnames')
@@ -22,7 +22,7 @@ export default function Project({ content, dark, reverse }) {
     >
       <div className="px-8 flex items-center w-full md:w-1/2">
         <div className={
-          classNames({
+          classNames('w-full', {
             "p-2 bg-white rounded shadow-md  border border-gray-200 dark:border-0": content.imageBorder
           })
          }
@@ -31,17 +31,19 @@ export default function Project({ content, dark, reverse }) {
             {dark && (
               <Image
                 src={content.imageSrcDark}
-                type={content.imageType}
                 alt={content.title}
-                classes={!content.imageBorder ? "rounded shadow-md" : ""}
+                width={content.imageWidth}
+                height={content.imageHeight}
+                className={!content.imageBorder ? "rounded shadow-md" : ""}
               />
             )}
             {!dark && (
               <Image
                 src={content.imageSrc}
-                type={content.imageType}
                 alt={content.title}
-                classes={!content.imageBorder ? "rounded shadow-md" : ""}
+                width={content.imageWidth}
+                height={content.imageHeight}
+                className={!content.imageBorder ? "rounded shadow-md" : ""}
               />
             )}
           </a>
