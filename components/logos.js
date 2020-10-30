@@ -1,7 +1,4 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable global-require */
-
-import Image from './image'
+import Image from 'next/image'
 import PaintIcon from './icons/paint-icon'
 
 export default function Logos() {
@@ -17,28 +14,16 @@ export default function Logos() {
 
       <div className="mb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
         <div className="bg-orange-100 dark:bg-orange-200 p-12 sm:p-16 flex items-center h-64">
-          <Image src="./images/logos/git.png" type="image/png" alt="Git logo" />
+          <Image src="/images/logos/git.png" alt="Git logo" width={910} height={380} />
         </div>
         <div className="bg-teal-100 dark:bg-teal-200 p-12 sm:p-16 flex items-center h-64">
-          <Image
-            src="./images/logos/libgit2.png"
-            type="image/png"
-            alt="libgit2 logo"
-          />
+          <Image src="/images/logos/libgit2.png" alt="libgit2 logo" width={538} height={132} />
         </div>
         <div className="bg-blue-100 dark:bg-blue-200 p-12 sm:p-16 flex items-center h-64">
-          <Image
-            src="./images/logos/neovim.png"
-            type="image/png"
-            alt="Neovim logo"
-          />
+          <Image src="/images/logos/neovim.png" alt="Neovim logo" width={741} height={214} />
         </div>
         <div className="bg-green-100 dark:bg-green-200 p-12 sm:p-16 flex items-center h-64">
-          <Image
-            src="./images/logos/tmux.png"
-            type="image/png"
-            alt="tmux logo"
-          />
+          <Image src="/images/logos/tmux.png" alt="tmux logo" width={608} height={160} />
         </div>
       </div>
     </>
