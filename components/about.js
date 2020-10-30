@@ -1,18 +1,11 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable global-require */
-/* eslint-disable react/jsx-one-expression-per-line */
-
-import Image from './image'
+import Image from 'next/image'
 
 export default function Projects() {
   return (
     <>
-      <Image
-        src="./images/profile.jpg"
-        type="image/jpeg"
-        classes="rounded-full w-16 md:w-20 mt-12 mx-auto"
-        alt="Jason Long"
-      />
+      <div className="w-16 md:w-20 mt-12 mx-auto">
+        <Image src="/images/profile.jpg" alt="Jason Long" width={192} height={192} className="rounded-full" />
+      </div>
 
       <h2 className="text-center pb-4 px-8 mt-4 text-large md:text-xl font-black dark:text-gray-100">
         I&apos;m a product designer.
