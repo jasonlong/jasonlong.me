@@ -10,20 +10,14 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "gray-matter": "^4.0.2",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
     "next": "^10.0.0",
-    "next-compose-plugins": "^2.2.0",
     "next-dark-mode": "^2.3.0",
-    "next-optimized-images": "^2.6.2",
     "react": "^17.0.1",
     "react-dom": "^16.14.0",
     "react-three-fiber": "^5.0.6",
     "react-toggle": "^4.1.1",
-    "responsive-loader": "^1.2.0",
     "swr": "^0.3.7",
-    "three": "^0.122.0",
-    "webp-loader": "^0.6.0"
+    "three": "^0.122.0"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
