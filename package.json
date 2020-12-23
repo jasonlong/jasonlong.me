@@ -11,7 +11,7 @@
     "autoprefixer": "^10.1.0",
     "classnames": "^2.2.6",
     "gray-matter": "^4.0.2",
-    "next": "^10.0.3",
+    "next": "^10.0.4",
     "next-dark-mode": "^2.3.2",
     "postcss": "^8.2.1",
     "react": "^17.0.1",
