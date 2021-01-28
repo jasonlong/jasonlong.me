@@ -19,7 +19,7 @@
     "react-three-fiber": "^5.0.6",
     "react-toggle": "^4.1.1",
     "swr": "^0.4.0",
-    "three": "^0.124.0"
+    "three": "^0.125.1"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^18.2.1",
