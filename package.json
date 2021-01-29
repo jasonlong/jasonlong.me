@@ -18,7 +18,7 @@
     "react-dom": "^16.14.0",
     "react-three-fiber": "^5.0.6",
     "react-toggle": "^4.1.1",
-    "swr": "^0.4.0",
+    "swr": "^0.4.1",
     "three": "^0.125.1"
   },
   "devDependencies": {
