@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@assortment/darkmodejs@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@assortment/darkmodejs/-/darkmodejs-1.2.0.tgz#4580dab94a85476cd68b3050368a40fdb2bae63a"
-  integrity sha512-tjTH0romXK/J7ftve93cWmgIJ7djK8ZL75P60/YG0VOMwSYG3EWfxRX/hDpmyAHbxu1aryQVK1IhFgq8/w0+QA==
+"@assortment/darkmodejs@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@assortment/darkmodejs/-/darkmodejs-1.2.1.tgz#b021f6d2c5b19d22115bbbc81711adb52322e066"
+  integrity sha512-kP8ZJKG4BluaYSAwsM3u6s4Zoa2NjUaQbKDBefhpYTyWuGxc+OeNvndsVZz4CIvCcUAMXbu9FX9HeKptfoMkOg==
 
 "@babel/code-frame@7.12.11":
   version "7.12.11"
@@ -1848,13 +1848,13 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-dark-mode@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/next-dark-mode/-/next-dark-mode-2.3.2.tgz#6cd26882877165d8d76b5893eb1f8d02204e27d1"
-  integrity sha512-fZ1JqridBJH+mR76c/fVudGQzO9mRNw0YXrN48cFpIsZDja8898SerjWTlWYVAYCyBkMQXetkjkh/cZKpDszpA==
+next-dark-mode@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/next-dark-mode/-/next-dark-mode-3.0.0.tgz#99196f799bbb03f35e0ca9688272626e2c4bd790"
+  integrity sha512-DNiKexCzNmzPuUZ9Udumo1ZOcZ7grxg1PGm72vBmjfwSW6P4Jm2WjUqaM74jb37NRflU3PjJxhmXTuaa4dFiTQ==
   dependencies:
-    "@assortment/darkmodejs" "^1.2.0"
-    nookies "^2.5.0"
+    "@assortment/darkmodejs" "^1.2.1"
+    nookies "^2.5.2"
 
 next@^10.0.8:
   version "10.0.8"
@@ -1957,10 +1957,10 @@ node-releases@^1.1.70:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
   integrity sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg==
 
-nookies@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/nookies/-/nookies-2.5.0.tgz#00c78ac9a91c3af82ab4bc8b193ad7bd41ee7aa5"
-  integrity sha512-yFIKz80h6SRqO1a6fcgO7D2qfnXAjXmGftPw5KrMWH+zGm1xHvyHyZ93z1yul9snwG/9LLvSY8pyZ3G5s6/UJQ==
+nookies@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/nookies/-/nookies-2.5.2.tgz#cc55547efa982d013a21475bd0db0c02c1b35b27"
+  integrity sha512-x0TRSaosAEonNKyCrShoUaJ5rrT5KHRNZ5DwPCuizjgrnkpE5DRf3VL7AyyQin4htict92X1EQ7ejDbaHDVdYA==
   dependencies:
     cookie "^0.4.1"
     set-cookie-parser "^2.4.6"
