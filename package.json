@@ -16,7 +16,7 @@
     "postcss": "^8.2.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-three-fiber": "^5.3.19",
+    "react-three-fiber": "^5.3.20",
     "react-toggle": "^4.1.2",
     "swr": "^0.5.4",
     "three": "^0.126.0"
