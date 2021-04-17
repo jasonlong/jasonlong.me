@@ -15,9 +15,6 @@
         "ecmaVersion": 11,
         "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
     "rules": {
       "semi": 0,
       "react/jsx-filename-extension": 0,
