@@ -8,13 +8,4 @@ a:hover {
   @apply text-blue-600;
 }
 
-.hero {
-  @apply bg-gray-100;
-}
-
-.dark .hero {
-  @apply bg-black;
-  @apply bg-opacity-10;
-}
-
 @tailwind utilities;
