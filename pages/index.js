@@ -25,7 +25,7 @@ export default function IndexPage({ projects }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       </Head>
 
-      <div className="max-w-screen-xl mx-auto bg-white dark:bg-gray-900 flex flex-col text-gray-900">
+      <div className="flex flex-col mx-auto text-gray-900 bg-white max-w-screen-xl dark:bg-gray-900">
         <Hero />
         <About />
         <Logos />
