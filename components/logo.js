@@ -156,6 +156,7 @@ export default function Logo() {
           camera={{ position: [1000, 1000, 1000], near: 1, far: 5000 }}
           invalidateFrameloop
           orthographic
+          linear
           noEvents
         >
           <Model dark={darkModeActive} />
