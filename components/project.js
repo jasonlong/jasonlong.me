@@ -20,10 +20,10 @@ export default function Project({ content, dark, reverse }) {
       })
      }
     >
-      <div className="px-8 flex items-center w-full md:w-1/2">
+      <div className="flex items-center w-full px-8 md:w-1/2">
         <div className={
           classNames('w-full', {
-            "p-2 bg-white rounded shadow-md  border border-gray-200 dark:border-0": content.imageBorder
+            "bg-white rounded border border-gray-200 dark:border-0": content.imageBorder
           })
          }
         >
@@ -34,7 +34,8 @@ export default function Project({ content, dark, reverse }) {
                 alt={content.title}
                 width={content.imageWidth}
                 height={content.imageHeight}
-                className={!content.imageBorder ? "rounded shadow-md" : ""}
+                layout='responsive'
+                className={!content.imageBorder ? "rounded" : ""}
               />
             )}
             {!dark && (
@@ -43,14 +44,15 @@ export default function Project({ content, dark, reverse }) {
                 alt={content.title}
                 width={content.imageWidth}
                 height={content.imageHeight}
-                className={!content.imageBorder ? "rounded shadow-md" : ""}
+                layout='responsive'
+                className={!content.imageBorder ? "rounded" : ""}
               />
             )}
           </a>
         </div>
       </div>
-      <div className="text-gray-700 dark:text-gray-500 px-8 py-6 md:py-0 flex flex-col justify-center w-full md:w-1/2">
-        <h3 className="font-bold text-xl">
+      <div className="flex flex-col justify-center w-full px-8 py-6 text-gray-700 dark:text-gray-500 md:py-0 md:w-1/2">
+        <h3 className="text-xl font-bold">
           <a href={content.url}>
             {content.title}
           </a>
@@ -60,7 +62,7 @@ export default function Project({ content, dark, reverse }) {
         </p>
         <p className="mt-4">
           <StarIcon size={16} />
-          <span className="inline-block align-middle ml-2">{data && data.stargazers_count}</span>
+          <span className="inline-block ml-2 align-middle">{data && data.stargazers_count}</span>
         </p>
       </div>
     </div>
