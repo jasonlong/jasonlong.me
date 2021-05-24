@@ -5,7 +5,7 @@ import Sun from './icons/sun'
 import Moon from './icons/moon'
 import SocialMediaIcons from './social-media-icons'
 
-const Logo = dynamic(() => import('../components/logo'), {
+const Logo = dynamic(() => import('./logo'), {
   loading: () => <div style={{ width: '90px', height: '90px' }} />,
   ssr: false
 })
