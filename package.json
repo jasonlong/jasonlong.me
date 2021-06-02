@@ -31,6 +31,6 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "2.3.0",
-    "tailwindcss": "^2.1.1"
+    "tailwindcss": "^2.1.3"
   }
 }
