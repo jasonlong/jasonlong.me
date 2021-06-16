@@ -1,5 +1,4 @@
 /* eslint-disable global-require */
-/* eslint-disable import/no-extraneous-dependencies */
 
 module.exports = {
   darkMode: 'class',
@@ -121,15 +120,15 @@ module.exports = {
         800: '#97266d',
         900: '#702459',
       },
-    }
+    },
   },
   purge: {
     content: [
       './components/**/*.{js,ts,jsx,tsx}',
-      './pages/**/*.{js,ts,jsx,tsx}'
+      './pages/**/*.{js,ts,jsx,tsx}',
     ],
     options: {
-      whitelist: ['dark']
-    }
-  }
+      whitelist: ['dark'],
+    },
+  },
 }
