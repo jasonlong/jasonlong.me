@@ -1,3 +1,5 @@
+/* eslint-disable react/display-name */
+
 import dynamic from 'next/dynamic'
 import { useDarkMode } from 'next-dark-mode'
 import Toggle from 'react-toggle'
@@ -7,7 +9,7 @@ import SocialMediaIcons from './social-media-icons'
 
 const Logo = dynamic(() => import('./logo'), {
   loading: () => <div style={{ width: '90px', height: '90px' }} />,
-  ssr: false
+  ssr: false,
 })
 
 export default function SiteHeader() {
@@ -19,7 +21,7 @@ export default function SiteHeader() {
   }
 
   return (
-    <div className="max-w-screen-xl mx-auto flex justify-between items-center py-4 px-8 xl:px-0">
+    <div className="flex items-center justify-between max-w-screen-xl px-8 py-4 mx-auto xl:px-0">
       <Logo />
 
       <div className="flex flex-row items-center">
@@ -31,7 +33,7 @@ export default function SiteHeader() {
           checked={darkModeActive}
           icons={{
             checked: <Moon />,
-            unchecked: <Sun />
+            unchecked: <Sun />,
           }}
           aria-label="Toggle light and dark modes"
           onChange={toggleMode}
