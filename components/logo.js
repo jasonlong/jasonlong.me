@@ -3,7 +3,7 @@
 /* eslint-disable no-else-return */
 
 import { useDarkMode } from 'next-dark-mode'
-import { Canvas, useThree, useFrame } from 'react-three-fiber'
+import { Canvas, useThree, useFrame } from '@react-three/fiber'
 import { useMemo, useEffect } from 'react'
 import * as THREE from 'three'
 
@@ -24,7 +24,7 @@ function Model({ dark }) {
       new THREE.MeshBasicMaterial({ color: 0x9064dd }),
       new THREE.MeshBasicMaterial({ color: 0x9064dd }),
       new THREE.MeshBasicMaterial({ color: 0x6421de }),
-      new THREE.MeshBasicMaterial({ color: 0x6421de })
+      new THREE.MeshBasicMaterial({ color: 0x6421de }),
     ])
 
     midMatArray = useMemo(() => [
@@ -33,7 +33,7 @@ function Model({ dark }) {
       new THREE.MeshBasicMaterial({ color: 0x6c55f9 }),
       new THREE.MeshBasicMaterial({ color: 0x6c55f9 }),
       new THREE.MeshBasicMaterial({ color: 0x6421de }),
-      new THREE.MeshBasicMaterial({ color: 0x6421de })
+      new THREE.MeshBasicMaterial({ color: 0x6421de }),
     ])
 
     lMatArray = useMemo(() => [
@@ -42,7 +42,7 @@ function Model({ dark }) {
       new THREE.MeshBasicMaterial({ color: 0x4b74f1 }),
       new THREE.MeshBasicMaterial({ color: 0x4b74f1 }),
       new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
-      new THREE.MeshBasicMaterial({ color: 0xd53f8c })
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
     ])
   } else {
     jMatArray = useMemo(() => [
@@ -51,7 +51,7 @@ function Model({ dark }) {
       new THREE.MeshBasicMaterial({ color: 0xf687b3 }),
       new THREE.MeshBasicMaterial({ color: 0xf687b3 }),
       new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
-      new THREE.MeshBasicMaterial({ color: 0xd53f8c })
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
     ])
 
     midMatArray = useMemo(() => [
@@ -60,7 +60,7 @@ function Model({ dark }) {
       new THREE.MeshBasicMaterial({ color: 0xb794f4 }),
       new THREE.MeshBasicMaterial({ color: 0xb794f4 }),
       new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
-      new THREE.MeshBasicMaterial({ color: 0xd53f8c })
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
     ])
 
     lMatArray = useMemo(() => [
@@ -69,7 +69,7 @@ function Model({ dark }) {
       new THREE.MeshBasicMaterial({ color: 0x7f9cf5 }),
       new THREE.MeshBasicMaterial({ color: 0x7f9cf5 }),
       new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
-      new THREE.MeshBasicMaterial({ color: 0xd53f8c })
+      new THREE.MeshBasicMaterial({ color: 0xd53f8c }),
     ])
   }
 
@@ -110,12 +110,12 @@ function Model({ dark }) {
 }
 
 function Bloom() {
-  EffectComposer = require('three/examples/jsm/postprocessing/EffectComposer')
-    .EffectComposer
-  UnrealBloomPass = require('three/examples/jsm/postprocessing/UnrealBloomPass')
-    .UnrealBloomPass
-  RenderPass = require('three/examples/jsm/postprocessing/RenderPass')
-    .RenderPass
+  EffectComposer =
+    require('three/examples/jsm/postprocessing/EffectComposer').EffectComposer
+  UnrealBloomPass =
+    require('three/examples/jsm/postprocessing/UnrealBloomPass').UnrealBloomPass
+  RenderPass =
+    require('three/examples/jsm/postprocessing/RenderPass').RenderPass
 
   const { gl, scene, camera, size } = useThree()
 
