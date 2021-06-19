@@ -1,4 +1,5 @@
-@tailwind base;
+@import 'tailwindcss/base';
+@import 'tailwindcss/utilities';
 
 a {
   @apply text-blue-500;
@@ -7,5 +8,3 @@ a {
 a:hover {
   @apply text-blue-600;
 }
-
-@tailwind utilities;
