@@ -152,7 +152,7 @@ export default function Logo() {
       <div className="logo" style={{ width: '90px', height: '90px' }}>
         <Canvas
           colorManagement={false}
-          pixelRatio={window.devicePixelRatio > 1 ? 2 : 1}
+          dpr={window.devicePixelRatio}
           camera={{ position: [1000, 1000, 1000], near: 1, far: 5000 }}
           invalidateFrameloop
           orthographic
