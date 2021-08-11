@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-props-no-spreading */
 
 import '../styles/index.css'
 import '../styles/toggle.css'
@@ -13,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     darkModeActive,
     switchToAutoMode,
     switchToDarkMode,
-    switchToLightMode
+    switchToLightMode,
   } = useDarkMode()
 
   return <Component {...pageProps} />
