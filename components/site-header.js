@@ -1,5 +1,3 @@
-/* eslint-disable react/display-name */
-
 import dynamic from 'next/dynamic'
 import { useDarkMode } from 'next-dark-mode'
 import Toggle from 'react-toggle'

@@ -4,7 +4,7 @@
         "es2020": true
     },
     "extends": [
-        "plugin:react/recommended",
+        "plugin:@next/next/recommended",
         "prettier"
     ],
     "parserOptions": {
