@@ -19,7 +19,7 @@
     "react-dom": "^17.0.2",
     "react-toggle": "^4.1.2",
     "swr": "^1.0.1",
-    "three": "^0.132.2"
+    "three": "^0.133.0"
   },
   "devDependencies": {
     "@tailwindcss/jit": "^0.1.18",
