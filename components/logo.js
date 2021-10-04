@@ -151,12 +151,12 @@ export default function Logo() {
     return (
       <div className="logo" style={{ width: '90px', height: '90px' }}>
         <Canvas
-          colorManagement={false}
           dpr={window.devicePixelRatio}
           camera={{ position: [1000, 1000, 1000], near: 1, far: 5000 }}
           invalidateFrameloop
           orthographic
           linear
+          flat
           noEvents
         >
           <Model dark={darkModeActive} />
