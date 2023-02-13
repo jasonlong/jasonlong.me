@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@tailwindcss/jit": "^0.1.18",
-    "eslint": "^8.33.0",
+    "eslint": "^8.34.0",
     "eslint-config-next": "^13.1.6",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.5",
