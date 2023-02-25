@@ -16,21 +16,55 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-    <div class="container mx-auto my-20">
+    <div class="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-3xl mx-auto my-20 relative">
       <slot />
     </div>
 	</body>
 </html>
 <style is:global>
-	:root {
-	}
 	html {
 		font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     @apply bg-yellow;
     @apply antialiased;
+    @apply text-gray-900;
 	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  a {
+    @apply font-semibold;
+    @apply underline;
+    @apply underline-offset-4;
+    @apply decoration-1;
+    @apply decoration-yellow-accent;
+  }
+  h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, pre, code, table, caption {
+    @apply mb-4;
+  }
+  h1 {
+    @apply font-bold;
+  }
+  h2 {
+    @apply font-bold;
+  }
+  h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+    @apply absolute;
+    @apply -left-9;
+    @apply w-6;
+    @apply opacity-40;
+    @apply mix-blend-hard-light;
+    @apply text-right;
+  }
+  h1:before {
+    content: "#";
+  }
+  h2:before {
+    content: "##";
+  }
+  h3:before {
+    content: "###";
+  }
+  li:before {
+    @apply opacity-40;
+    @apply mix-blend-hard-light;
+    content: "* ";
+  }
+
 </style>
