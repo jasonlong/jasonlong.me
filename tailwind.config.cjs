@@ -4,9 +4,11 @@ module.exports = {
 	theme: {
 		extend: {},
     colors: {
+      'black': '#000',
       'yellow': '#ffc833',
       'yellow-accent': '#c39724',
-      'gray-900': '#312f28'
+      'yellow-accent-dark': '#845e10',
+      'gray-900': '#211f1a'
     }
 	},
 	plugins: [],

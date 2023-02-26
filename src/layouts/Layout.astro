@@ -21,8 +21,10 @@ const {frontmatter} = Astro.props;
 	html {
 		font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     @apply bg-yellow;
+    @apply dark:bg-gray-900;
     @apply antialiased;
     @apply text-gray-900;
+    @apply dark:text-yellow;
 	}
   a {
     @apply font-semibold;
@@ -30,9 +32,13 @@ const {frontmatter} = Astro.props;
     @apply underline-offset-4;
     @apply decoration-1;
     @apply decoration-yellow-accent;
+    @apply dark:decoration-yellow;
+    @apply dark:decoration-yellow-accent-dark;
+    @apply text-black;
+    @apply dark:text-yellow;
   }
-  h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, pre, code, table, caption {
-    @apply mb-4;
+  h1, h2, h3, h4, p, ul, ol, blockquote, pre, code, table, caption {
+    @apply mb-6;
   }
   h1 {
     @apply font-bold;
@@ -40,7 +46,7 @@ const {frontmatter} = Astro.props;
   h2 {
     @apply font-bold;
   }
-  h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+  h1:before, h2:before, h3:before, h4:before {
     @apply absolute;
     @apply -left-9;
     @apply w-6;
@@ -57,10 +63,42 @@ const {frontmatter} = Astro.props;
   h3:before {
     content: "###";
   }
+  h4:before {
+    content: "####";
+  }
   li:before {
-    @apply opacity-40;
     @apply mix-blend-hard-light;
     content: "* ";
   }
-
+  b:before, strong:before {
+    @apply opacity-40;
+    @apply mix-blend-hard-light;
+    content: "**";
+  }
+  b:after, strong:after {
+    @apply opacity-40;
+    @apply mix-blend-hard-light;
+    content: "**";
+  }
+  i:before, em:before {
+    @apply opacity-40;
+    @apply mix-blend-hard-light;
+    content: "_";
+  }
+  i:after, em:after {
+    @apply opacity-40;
+    @apply mix-blend-hard-light;
+    content: "_";
+  }
+  hr {
+    @apply my-6;
+    @apply invisible;
+    @apply h-6;
+  }
+  hr:before {
+    @apply visible;
+    @apply opacity-40;
+    @apply mix-blend-hard-light;
+    content: "----";
+  }
 </style>
