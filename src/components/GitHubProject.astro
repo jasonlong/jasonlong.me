@@ -1,0 +1,6 @@
+---
+const {name, description, repo} = Astro.props
+const response = await fetch(`https://api.github.com/repos/${repo}`);
+const data = await response.json();
+---
+<a href=`https://github.com/${repo}`>{name}</a> (⭑{new Intl.NumberFormat().format(data.stargazers_count)}): {description}
