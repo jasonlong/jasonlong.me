@@ -5,7 +5,7 @@ title: Jason Long, Product Designerd
 
 # Jason Long
 
-I am a **product designer** currently working at [PlanetScale](https://planetscale.com). Before that, I worked at [GitHub](https://github.com) for 9 years. View my [read.cv profile](https://read.cv/jasonlong).
+I am a **product designerd** currently working at [PlanetScale](https://planetscale.com). Before that, I worked at [GitHub](https://github.com) for 9 years. View my [read.cv profile](https://read.cv/jasonlong).
 
 ## Projects
 
@@ -20,5 +20,5 @@ These are a few of my open source projects (see [my GitHub profile](https://gith
 
 ## Contact
 
-I've left Twitter and I'm now enjoying the community on Mastodon. You can find me at https://mastodon.design/@jasonlong. My email address is jason@jasonlong.me.
+I've left Twitter and I'm now enjoying the community on Mastodon. You can find me at <a href="https://mastodon.design/@jasonlong" rel="me">mastodon.design/@jasonlong</a>. My email address is jason@jasonlong.me.
 
