@@ -12,8 +12,8 @@ const {frontmatter} = Astro.props;
 		<title>{frontmatter.title}</title>
     <script defer data-domain="jasonlong.me" src="https://plausible.io/js/script.js"></script>
 	</head>
-	<body>
-    <div class="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-3xl mx-auto my-20 relative">
+	<body class="px-12 sm:px-6">
+    <div class="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-3xl mx-auto my-10 md:my-20 relative">
       <slot />
     </div>
 	</body>
@@ -28,9 +28,9 @@ const {frontmatter} = Astro.props;
     @apply dark:text-zinc-400;
 	}
   a {
-    @apply text-sky-500;;
+    @apply text-sky-600;;
     @apply dark:text-sky-400;
-    @apply font-semibold;
+    @apply font-medium;
     @apply underline;
     @apply underline-offset-4;
     @apply decoration-1;
@@ -83,6 +83,9 @@ const {frontmatter} = Astro.props;
   ul {
     @apply ml-4;
     @apply list-['*\2002'];
+  }
+  b, strong {
+    @apply font-semibold;
   }
   b:before, strong:before {
     @apply text-zinc-300;
