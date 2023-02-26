@@ -21,11 +21,14 @@ These are a few of my open source projects ([view my GitHub profile](https://git
 ## Miscellenea
 
 * I live in Columbus, Ohio and I'm married with three children.
-* I try to walk 8-10k steps a day.
+* I try to walk 8-10k steps a day. I use [StepsApp](https://steps.app/) for tracking.
+* I have a degree in Computer Science (Ohio State) and started my career as a Windows developer.
+* I gradually shifted to design while freelancing in the early 00's.
 * My hardware setup consists of an M1 MacBook Pro, XDR display, and a Tofu65 keyboard by KBDfans. [[View photos of my workspace](https://www.workspaces.xyz/p/160-jason-long)]
 * My dev environment is Neovim + tmux with a modified Nord theme. [[View dotfiles](https://github.com/jasonlong/dotfiles)]
 * I'm currently reading [Poor Charlie's Almanack](https://literal.club/jasonlong/book/poor-charlies-almanack-40). [[View my books](https://literal.club/jasonlong)]
-
+* I'm currently watching [The Last of Us](https://www.hbo.com/the-last-of-us/season-1) and [Drive to Survive](https://www.netflix.com/title/80204890).
+* I'm a mechanical watch nerd.
 
 ## Contact
 
