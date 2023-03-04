@@ -11,13 +11,12 @@ module.exports = {
       // It's the setting you need when using TypeScript.
       parserOptions: {
         parser: "@typescript-eslint/parser",
-        extraFileExtensions: [".astro"],
+        extraFileExtensions: [".astro"]
       },
       rules: {
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
-      },
-    },
-    // ...
-  ],
+      }
+    }
+  ]
 }
