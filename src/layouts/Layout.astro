@@ -1,35 +1,42 @@
 ---
-const {frontmatter} = Astro.props;
+const { frontmatter } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Personal site of Jason Long, Product Designerd">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-		<title>{frontmatter.title}</title>
-    <script defer data-domain="jasonlong.me" src="https://plausible.io/js/script.js"></script>
-	</head>
-	<body class="px-12 sm:px-6">
-    <div class="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-3xl mx-auto my-10 md:my-20 relative">
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='description' content='Jason Long · Product Designerd' />
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+    <title>{frontmatter.title}</title>
+    <script
+      defer
+      data-domain='jasonlong.me'
+      src='https://plausible.io/js/script.js'
+    ></script>
+  </head>
+  <body class='flex px-12 sm:px-6'>
+    <div
+      class='relative mx-auto my-10 max-w-xs sm:max-w-sm md:my-20 md:max-w-lg lg:max-w-3xl'
+    >
       <slot />
     </div>
-	</body>
+  </body>
 </html>
 <style is:global>
-	html {
-		font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  html {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+      'Courier New', monospace;
     @apply bg-zinc-100;
     @apply dark:bg-zinc-900;
     @apply antialiased;
     @apply text-zinc-600;
     @apply dark:text-zinc-300;
-	}
+  }
   a {
-    @apply text-sky-600;;
+    @apply text-sky-600;
     @apply dark:text-sky-400;
     @apply font-medium;
     @apply underline;
@@ -38,7 +45,18 @@ const {frontmatter} = Astro.props;
     @apply decoration-zinc-300;
     @apply dark:decoration-zinc-600;
   }
-  h1, h2, h3, h4, p, ul, ol, blockquote, pre, code, table, caption {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul,
+  ol,
+  blockquote,
+  pre,
+  code,
+  table,
+  caption {
     @apply mb-6;
   }
   h1 {
@@ -61,7 +79,10 @@ const {frontmatter} = Astro.props;
     @apply text-zinc-900;
     @apply dark:text-zinc-50;
   }
-  h1:before, h2:before, h3:before, h4:before {
+  h1:before,
+  h2:before,
+  h3:before,
+  h4:before {
     @apply absolute;
     @apply -left-9;
     @apply w-6;
@@ -70,43 +91,48 @@ const {frontmatter} = Astro.props;
     @apply text-right;
   }
   h1:before {
-    content: "#";
+    content: '#';
   }
   h2:before {
-    content: "##";
+    content: '##';
   }
   h3:before {
-    content: "###";
+    content: '###';
   }
   h4:before {
-    content: "####";
+    content: '####';
   }
   ul {
     @apply ml-4;
     @apply list-['*\2002'];
   }
-  b, strong {
+  b,
+  strong {
     @apply font-semibold;
   }
-  b:before, strong:before {
+  b:before,
+  strong:before {
     @apply text-zinc-300;
     @apply dark:text-zinc-600;
-    content: "**";
+    content: '**';
   }
-  b:after, strong:after {
+  b:after,
+  strong:after {
     @apply text-zinc-300;
     @apply dark:text-zinc-600;
-    content: "**";
+    content: '**';
   }
-  i:before, em:before {
+  i:before,
+  em:before {
     @apply text-zinc-300;
     @apply dark:text-zinc-600;
-    content: "_";
+    content: '_';
   }
-  i:after, em:after {
+  i:after,
+  em:after {
     @apply opacity-40;
     @apply mix-blend-hard-light;
-    content: "_";
+    content: '_';
   }
   hr {
     @apply my-6;
@@ -117,6 +143,6 @@ const {frontmatter} = Astro.props;
     @apply visible;
     @apply opacity-40;
     @apply mix-blend-hard-light;
-    content: "----";
+    content: '----';
   }
 </style>
