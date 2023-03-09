@@ -18,9 +18,9 @@ import '@fontsource/jetbrains-mono'
       src='https://plausible.io/js/script.js'
     ></script>
   </head>
-  <body class='flex px-12 sm:px-6'>
+  <body class='flex pl-10 pr-6 sm:px-6'>
     <div
-      class='relative mx-auto my-10 max-w-xs sm:max-w-sm md:my-20 md:max-w-lg lg:max-w-3xl'
+      class='max-w-xs_ relative mx-auto my-10 sm:max-w-lg md:my-20 md:max-w-2xl lg:max-w-3xl'
     >
       <slot />
     </div>
@@ -28,8 +28,7 @@ import '@fontsource/jetbrains-mono'
 </html>
 <style is:global>
   html {
-    font-family: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas,
-      'Liberation Mono', 'Courier New', monospace;
+    @apply font-body;
     @apply bg-zinc-100;
     @apply dark:bg-zinc-900;
     @apply antialiased;
