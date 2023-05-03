@@ -27,6 +27,10 @@ import '@fontsource/jetbrains-mono'
   </body>
 </html>
 <style is:global>
+  :root {
+    --link-color-light: oklch(54% 0.169 242);
+    --link-color-dark: oklch(68% 0.169 242);
+  }
   html {
     @apply font-body;
     @apply bg-zinc-100;
@@ -37,13 +41,18 @@ import '@fontsource/jetbrains-mono'
   }
   a {
     @apply text-sky-600;
-    @apply dark:text-sky-400;
     @apply font-medium;
     @apply underline;
     @apply underline-offset-4;
     @apply decoration-1;
     @apply decoration-zinc-300;
     @apply dark:decoration-zinc-600;
+    color: var(--link-color-light);
+  }
+  @media (prefers-color-scheme: dark) {
+    a {
+      color: var(--link-color-dark);
+    }
   }
   h1,
   h2,
