@@ -41,15 +41,20 @@ import '@fontsource/jetbrains-mono'
   }
   a {
     @apply text-sky-600;
+    @apply dark:text-sky-400;
     @apply font-medium;
     @apply underline;
     @apply underline-offset-4;
     @apply decoration-1;
     @apply decoration-zinc-300;
     @apply dark:decoration-zinc-600;
-    color: var(--link-color-light);
   }
-  @media (prefers-color-scheme: dark) {
+  @media (color-gamut: p3) {
+    a {
+      color: var(--link-color-light);
+    }
+  }
+  @media (color-gamut: p3) and (prefers-color-scheme: dark) {
     a {
       color: var(--link-color-dark);
     }
