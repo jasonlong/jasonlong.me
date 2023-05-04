@@ -8,7 +8,7 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^0.19.0",
+		"@astrojs/mdx": "^0.19.1",
 		"@astrojs/netlify": "^2.2.2",
 		"@astrojs/tailwind": "^3.1.2",
 		"@fontsource/jetbrains-mono": "^4.5.12",
