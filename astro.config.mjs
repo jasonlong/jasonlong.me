@@ -8,4 +8,10 @@ export default defineConfig({
   integrations: [tailwind(), mdx()],
   output: 'server',
   adapter: cloudflare(),
+
+  vite: {
+    build: {
+      minify: false,
+    },
+  },
 })
