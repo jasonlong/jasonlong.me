@@ -9,7 +9,7 @@
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^0.19.7",
-		"@astrojs/netlify": "^2.3.0",
+		"@astrojs/netlify": "^2.4.0",
 		"@astrojs/tailwind": "^4.0.0",
 		"@fontsource/jetbrains-mono": "^5.0.5",
 		"astro": "^2.8.3",
