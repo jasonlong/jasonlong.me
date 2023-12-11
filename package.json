@@ -8,11 +8,11 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^1.1.5",
-		"@astrojs/netlify": "^3.0.4",
-		"@astrojs/tailwind": "^5.0.2",
+		"@astrojs/mdx": "^2.0.1",
+		"@astrojs/netlify": "^3.1.1",
+		"@astrojs/tailwind": "^5.0.3",
 		"@fontsource/jetbrains-mono": "^5.0.18",
-		"astro": "^3.6.4",
+		"astro": "^4.0.4",
 		"tailwindcss": "^3.3.6"
 	},
 	"devDependencies": {
