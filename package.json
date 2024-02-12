@@ -9,10 +9,10 @@
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^2.1.1",
-		"@astrojs/netlify": "^5.0.1",
+		"@astrojs/netlify": "^5.1.1",
 		"@astrojs/tailwind": "^5.1.0",
 		"@fontsource/jetbrains-mono": "^5.0.18",
-		"astro": "^4.3.2",
+		"astro": "^4.3.6",
 		"tailwindcss": "^3.4.1"
 	},
 	"devDependencies": {
