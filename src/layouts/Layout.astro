@@ -1,6 +1,5 @@
 ---
 const { frontmatter } = Astro.props
-import '@fontsource/jetbrains-mono'
 ---
 
 <!DOCTYPE html>
@@ -27,6 +26,10 @@ import '@fontsource/jetbrains-mono'
   </body>
 </html>
 <style is:global>
+@font-face {
+  font-family: 'Berkeley-Mono';
+  src: url('BerkeleyMono-Regular.woff') format('woff');
+}
   :root {
     --link-color-light: oklch(54% 0.169 242);
     --link-color-dark: oklch(68% 0.169 242);
