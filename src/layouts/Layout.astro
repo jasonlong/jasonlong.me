@@ -31,7 +31,7 @@ const { frontmatter } = Astro.props
   src: url('/fonts/pixelcode.woff2') format('woff2');
 }
   :root {
-    --link-color-dark: oklch(68% 0.169 242);
+    --link-color: oklch(68% 0.169 242);
   }
   html {
     @apply font-body;
@@ -43,20 +43,10 @@ const { frontmatter } = Astro.props
   }
   a {
     @apply text-sky-400;
-    @apply font-medium;
-    @apply underline;
-    @apply underline-offset-4;
-    @apply decoration-1;
-    @apply decoration-zinc-600;
   }
   @media (color-gamut: p3) {
     a {
-      color: var(--link-color-dark);
-    }
-  }
-  @media (color-gamut: p3) and (prefers-color-scheme: dark) {
-    a {
-      color: var(--link-color-dark);
+      color: var(--link-color);
     }
   }
   h1,
@@ -74,19 +64,15 @@ const { frontmatter } = Astro.props
     @apply mb-6;
   }
   h1 {
-    @apply font-bold;
     @apply text-zinc-50;
   }
   h2 {
-    @apply font-bold;
     @apply text-zinc-50;
   }
   h3 {
-    @apply font-bold;
     @apply text-zinc-50;
   }
   h4 {
-    @apply font-bold;
     @apply text-zinc-50;
   }
   h1:before,
