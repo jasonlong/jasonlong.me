@@ -26,16 +26,18 @@ const { frontmatter } = Astro.props
   </body>
 </html>
 <style is:global>
-  @font-face {
-    font-family: 'Berkeley-Mono';
-    src: url('/fonts/BerkeleyMono-Regular.woff') format('woff');
-  }
+@font-face {
+  font-family: 'PixelCode';
+  src: url('fonts/pixelcode.woff2') format('woff2');
+}
   :root {
     --link-color-light: oklch(54% 0.169 242);
     --link-color-dark: oklch(68% 0.169 242);
   }
   html {
     @apply font-body;
+    @apply text-lg;
+    @apply leading-snug;
     @apply bg-zinc-100;
     @apply dark:bg-zinc-900;
     @apply antialiased;
