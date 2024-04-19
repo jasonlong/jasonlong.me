@@ -31,37 +31,22 @@ const { frontmatter } = Astro.props
   src: url('/fonts/pixelcode.woff2') format('woff2');
 }
   :root {
-    --link-color-light: oklch(54% 0.169 242);
-    --link-color-dark: oklch(68% 0.169 242);
+    --link-color: oklch(68% 0.169 242);
   }
   html {
     @apply font-body;
     @apply text-lg;
     @apply leading-snug;
-    @apply bg-zinc-100;
-    @apply dark:bg-zinc-900;
+    @apply bg-zinc-900;
     @apply antialiased;
-    @apply text-zinc-600;
-    @apply dark:text-zinc-300;
+    @apply text-zinc-300;
   }
   a {
-    @apply text-sky-600;
-    @apply dark:text-sky-400;
-    @apply font-medium;
-    @apply underline;
-    @apply underline-offset-4;
-    @apply decoration-1;
-    @apply decoration-zinc-300;
-    @apply dark:decoration-zinc-600;
+    @apply text-sky-400;
   }
   @media (color-gamut: p3) {
     a {
-      color: var(--link-color-light);
-    }
-  }
-  @media (color-gamut: p3) and (prefers-color-scheme: dark) {
-    a {
-      color: var(--link-color-dark);
+      color: var(--link-color);
     }
   }
   h1,
@@ -79,24 +64,16 @@ const { frontmatter } = Astro.props
     @apply mb-6;
   }
   h1 {
-    @apply font-bold;
-    @apply text-zinc-900;
-    @apply dark:text-zinc-50;
+    @apply text-zinc-50;
   }
   h2 {
-    @apply font-bold;
-    @apply text-zinc-900;
-    @apply dark:text-zinc-50;
+    @apply text-zinc-50;
   }
   h3 {
-    @apply font-bold;
-    @apply text-zinc-900;
-    @apply dark:text-zinc-50;
+    @apply text-zinc-50;
   }
   h4 {
-    @apply font-bold;
-    @apply text-zinc-900;
-    @apply dark:text-zinc-50;
+    @apply text-zinc-50;
   }
   h1:before,
   h2:before,
@@ -105,8 +82,7 @@ const { frontmatter } = Astro.props
     @apply absolute;
     @apply -left-9;
     @apply w-6;
-    @apply text-zinc-300;
-    @apply dark:text-zinc-600;
+    @apply text-zinc-600;
     @apply text-right;
   }
   h1:before {
@@ -131,20 +107,17 @@ const { frontmatter } = Astro.props
   }
   b:before,
   strong:before {
-    @apply text-zinc-300;
-    @apply dark:text-zinc-600;
+    @apply text-zinc-600;
     content: '**';
   }
   b:after,
   strong:after {
-    @apply text-zinc-300;
-    @apply dark:text-zinc-600;
+    @apply text-zinc-600;
     content: '**';
   }
   i:before,
   em:before {
-    @apply text-zinc-300;
-    @apply dark:text-zinc-600;
+    @apply text-zinc-600;
     content: '_';
   }
   i:after,
