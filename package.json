@@ -12,7 +12,7 @@
     "@astrojs/netlify": "^5.3.0",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.10.1",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.4"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^7.12.0",
