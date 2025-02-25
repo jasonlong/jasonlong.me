@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.8",
-    "@astrojs/netlify": "^6.2.0",
+    "@astrojs/netlify": "^6.2.1",
     "@astrojs/tailwind": "^6.0.0",
-    "astro": "^5.2.5",
+    "astro": "^5.3.1",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
