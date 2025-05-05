@@ -8,10 +8,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.2.5",
-    "@astrojs/netlify": "^6.3.1",
+    "@astrojs/mdx": "^4.2.6",
+    "@astrojs/netlify": "^6.3.2",
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.7.7",
+    "astro": "^5.7.10",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
