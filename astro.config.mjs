@@ -7,4 +7,7 @@ export default defineConfig({
   integrations: [tailwind(), mdx()],
   output: 'server',
   adapter: netlify(),
+  devToolbar: {
+    enabled: false,
+  },
 })
