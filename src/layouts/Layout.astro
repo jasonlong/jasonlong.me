@@ -1,6 +1,5 @@
 ---
 import indexCss from '../styles/index.css?url'
-import fontCss from '../styles/font.css?url'
 const { frontmatter } = Astro.props
 ---
 
@@ -13,7 +12,6 @@ const { frontmatter } = Astro.props
     <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
     <title>{frontmatter.title}</title>
-    <link rel='stylesheet' href={fontCss} />
     <link rel='stylesheet' href={indexCss} />
     <script
       defer
