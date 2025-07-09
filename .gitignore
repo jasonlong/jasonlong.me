@@ -23,3 +23,7 @@
 node_modules
 
 dist
+
+.astro
+.claude
+.netlify
