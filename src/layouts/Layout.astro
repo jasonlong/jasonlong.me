@@ -12,6 +12,12 @@ const { frontmatter } = Astro.props
     <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
     <title>{frontmatter.title}</title>
+    <style>
+      @font-face {
+        font-family: 'PixelCode';
+        src: url('/fonts/pixelcode.woff2') format('woff2');
+      }
+    </style>
     <link rel='stylesheet' href={indexCss} />
     <script
       defer
