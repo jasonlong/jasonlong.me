@@ -9,13 +9,14 @@
 
 :root {
   --link-color: oklch(68% 0.169 242);
+  --text-red: #ff0000;
 }
 
 html {
   @apply font-body;
   @apply text-lg;
   @apply leading-snug;
-  @apply bg-zinc-900;
+  @apply bg-zinc-900 dark:bg-zinc-900;
   @apply antialiased;
   @apply text-zinc-300;
 }
@@ -134,4 +135,51 @@ hr:before {
   @apply opacity-40;
   @apply mix-blend-hard-light;
   content: '----';
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color: rgb(from var(--text-red) r g b / 0.75);
+    @apply bg-black;
+  }
+
+  a {
+    color: var(--text-red);
+    @apply underline;
+    @apply decoration-dashed;
+    @apply underline-offset-4;
+    @apply !opacity-100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--text-red);
+  }
+
+  h1:before,
+  h2:before,
+  h3:before,
+  h4:before {
+    color: var(--text-red);
+    @apply opacity-40;
+  }
+
+  b:before,
+  strong:before,
+  b:after,
+  strong:after {
+    color: var(--text-red);
+  }
+
+  i:before,
+  em:before {
+    color: var(--text-red);
+  }
+
+  hr:before {
+    @apply opacity-30;
+    @apply mix-blend-normal;
+  }
 }
