@@ -2,7 +2,7 @@
 const { frontmatter } = Astro.props
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
@@ -11,12 +11,10 @@ const { frontmatter } = Astro.props
     <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
     <title>{frontmatter.title}</title>
-    <link rel='stylesheet' href='/src/styles/index.css' />
     <script
       defer
       data-domain='jasonlong.me'
-      src='https://plausible.io/js/script.js'
-    ></script>
+      src='https://plausible.io/js/script.js'></script>
   </head>
   <body class='flex pl-10 pr-6 sm:px-6'>
     <div
@@ -26,3 +24,186 @@ const { frontmatter } = Astro.props
     </div>
   </body>
 </html>
+<style is:global>
+  @font-face {
+    font-family: 'PixelCode';
+    src: url('/fonts/pixelcode.woff2') format('woff2');
+  }
+
+  :root {
+    --link-color: oklch(68% 0.169 242);
+    --text-red: #ff0000;
+  }
+
+  html {
+    @apply font-body;
+    @apply text-lg;
+    @apply leading-snug;
+    @apply bg-zinc-900 dark:bg-zinc-900;
+    @apply antialiased;
+    @apply text-zinc-300;
+  }
+
+  a {
+    @apply text-sky-400;
+  }
+
+  @media (color-gamut: p3) {
+    a {
+      color: var(--link-color);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul,
+  ol,
+  blockquote,
+  pre,
+  code,
+  table,
+  caption {
+    @apply mb-6;
+  }
+
+  h1 {
+    @apply text-zinc-50;
+  }
+
+  h2 {
+    @apply text-zinc-50;
+  }
+
+  h3 {
+    @apply text-zinc-50;
+  }
+
+  h4 {
+    @apply text-zinc-50;
+  }
+
+  h1:before,
+  h2:before,
+  h3:before,
+  h4:before {
+    @apply absolute;
+    @apply -left-9;
+    @apply w-6;
+    @apply text-zinc-600;
+    @apply text-right;
+  }
+
+  h1:before {
+    content: '#';
+  }
+
+  h2:before {
+    content: '##';
+  }
+
+  h3:before {
+    content: '###';
+  }
+
+  h4:before {
+    content: '####';
+  }
+
+  ul {
+    @apply ml-4;
+    @apply list-['*\2002'];
+  }
+
+  b,
+  strong {
+    @apply font-semibold;
+  }
+
+  b:before,
+  strong:before {
+    @apply text-zinc-600;
+    content: '**';
+  }
+
+  b:after,
+  strong:after {
+    @apply text-zinc-600;
+    content: '**';
+  }
+
+  i:before,
+  em:before {
+    @apply text-zinc-600;
+    content: '_';
+  }
+
+  i:after,
+  em:after {
+    @apply opacity-40;
+    @apply mix-blend-hard-light;
+    content: '_';
+  }
+
+  hr {
+    @apply my-6;
+    @apply invisible;
+    @apply h-6;
+  }
+
+  hr:before {
+    @apply visible;
+    @apply opacity-40;
+    @apply mix-blend-hard-light;
+    content: '----';
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html {
+      color: rgb(from var(--text-red) r g b / 0.8);
+      @apply bg-black;
+    }
+
+    a {
+      color: var(--text-red);
+      @apply underline;
+      @apply decoration-dashed;
+      @apply underline-offset-4;
+      @apply !opacity-100;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--text-red);
+    }
+
+    h1:before,
+    h2:before,
+    h3:before,
+    h4:before {
+      color: var(--text-red);
+      @apply opacity-40;
+    }
+
+    b:before,
+    strong:before,
+    b:after,
+    strong:after {
+      color: var(--text-red);
+    }
+
+    i:before,
+    em:before {
+      color: var(--text-red);
+    }
+
+    hr:before {
+      @apply opacity-30;
+      @apply mix-blend-normal;
+    }
+  }
+</style>
