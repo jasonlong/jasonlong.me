@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'PixelCode';
+  src: url('/fonts/pixelcode.woff2') format('woff2');
+}
 
 :root {
   --link-color: oklch(68% 0.169 242);
