@@ -50,6 +50,12 @@ const { frontmatter } = Astro.props
     @apply text-sky-400;
   }
 
+  a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
   @media (color-gamut: p3) {
     a {
       color: var(--link-color);
