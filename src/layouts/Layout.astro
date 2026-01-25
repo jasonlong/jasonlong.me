@@ -10,6 +10,7 @@ const { frontmatter } = Astro.props
     <meta name='description' content='Jason Long · Product Designerd' />
     <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+    <link rel='preload' href='/fonts/pixelcode.woff2' as='font' type='font/woff2' crossorigin />
     <title>{frontmatter.title}</title>
     <script
       defer
@@ -28,6 +29,7 @@ const { frontmatter } = Astro.props
   @font-face {
     font-family: 'PixelCode';
     src: url('/fonts/pixelcode.woff2') format('woff2');
+    font-display: swap;
   }
 
   :root {
