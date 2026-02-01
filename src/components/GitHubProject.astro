@@ -1,8 +1,40 @@
 ---
+import { getStore } from '@netlify/blobs'
+
 const { name, description, repo } = Astro.props
-const response = await fetch(`https://api.github.com/repos/${repo}`)
-const data = response.ok ? await response.json() : null
-const starCount = data?.stargazers_count
+
+let starCount: number | null = null
+
+try {
+  const cache = getStore('github-stars')
+  const cacheKey = repo.replace('/', '-')
+  const cached = await cache.get(cacheKey, { type: 'json' }) as { etag: string, stars: number } | null
+
+  const headers: HeadersInit = {}
+  if (cached?.etag) {
+    headers['If-None-Match'] = cached.etag
+  }
+
+  const response = await fetch(`https://api.github.com/repos/${repo}`, { headers })
+
+  if (response.status === 304 && cached) {
+    starCount = cached.stars
+  } else if (response.ok) {
+    const data = await response.json()
+    starCount = data.stargazers_count
+    const etag = response.headers.get('etag')
+    if (etag && starCount) {
+      await cache.setJSON(cacheKey, { etag, stars: starCount })
+    }
+  }
+} catch {
+  // Cache unavailable (local dev), fall back to direct fetch
+  const response = await fetch(`https://api.github.com/repos/${repo}`)
+  if (response.ok) {
+    const data = await response.json()
+    starCount = data.stargazers_count
+  }
+}
 ---
 
 <a href=`https://github.com/${repo}`>{name}</a>: {description}{starCount && ` (⭑${new Intl.NumberFormat().format(starCount)})`}
