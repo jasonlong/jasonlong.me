@@ -1,48 +1,16 @@
 ---
-import { env } from 'cloudflare:workers'
-
 const { name, description, repo } = Astro.props
 
 let starCount: number | null = null
-const cacheKey = repo.replace('/', '-')
 
 try {
-  // Access KV via cloudflare:workers module
-  const kv = env.GITHUB_STARS
-
-  let cached: { etag: string, stars: number } | null = null
-
-  if (kv) {
-    const cachedStr = await kv.get(cacheKey)
-    if (cachedStr) {
-      cached = JSON.parse(cachedStr)
-    }
-  }
-
-  const headers: HeadersInit = {}
-  if (cached?.etag) {
-    headers['If-None-Match'] = cached.etag
-  }
-
-  const response = await fetch(`https://api.github.com/repos/${repo}`, { headers })
-
-  if (response.status === 304 && cached) {
-    starCount = cached.stars
-  } else if (response.ok) {
-    const data = await response.json()
-    starCount = data.stargazers_count
-    const etag = response.headers.get('etag')
-    if (kv && etag && starCount) {
-      await kv.put(cacheKey, JSON.stringify({ etag, stars: starCount }))
-    }
-  }
-} catch {
-  // Fallback to direct fetch on error
   const response = await fetch(`https://api.github.com/repos/${repo}`)
   if (response.ok) {
     const data = await response.json()
     starCount = data.stargazers_count
   }
+} catch {
+  // Fetch failed, starCount remains null
 }
 ---
 
