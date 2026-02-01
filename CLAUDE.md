@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is Jason Long's personal website (jasonlong.me), built with Astro 5, TailwindCSS, and MDX. It's deployed to Netlify using server-side rendering.
+This is Jason Long's personal website (jasonlong.me), built with Astro 5, TailwindCSS, and MDX. It's deployed to Cloudflare Pages as a static site with daily rebuilds via GitHub Actions.
 
 ## Commands
 
@@ -16,10 +16,10 @@ npm run preview  # Preview production build locally
 
 ## Architecture
 
-- **Astro 5** with SSR mode (`output: 'server'`) using Netlify adapter
+- **Astro 5** with static output (`output: 'static'`) using Cloudflare adapter
 - **Single page site** - `src/pages/index.mdx` is the only page, written in MDX
 - **Layout** - `src/layouts/Layout.astro` wraps the page with global styles
-- **Components** - `src/components/GitHubProject.astro` fetches GitHub API for repo star counts at request time
+- **Components** - `src/components/GitHubProject.astro` fetches GitHub API for repo star counts at build time
 
 ## Styling
 

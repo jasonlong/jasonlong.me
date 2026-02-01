@@ -2,51 +2,17 @@
 const { name, description, repo } = Astro.props
 
 let starCount: number | null = null
-const cacheKey = repo.replace('/', '-')
-
-// Access KV binding from Cloudflare runtime
-const kv = Astro.locals.runtime?.env?.GITHUB_STARS
 
 try {
-  let cached: { etag: string, stars: number } | null = null
-
-  if (kv) {
-    const cachedStr = await kv.get(cacheKey)
-    if (cachedStr) {
-      cached = JSON.parse(cachedStr)
-    }
-  }
-
-  const headers: HeadersInit = { 'User-Agent': 'jasonlong.me' }
-  if (cached?.etag) {
-    headers['If-None-Match'] = cached.etag
-  }
-
-  const response = await fetch(`https://api.github.com/repos/${repo}`, { headers })
-
-  if (response.status === 304 && cached) {
-    starCount = cached.stars
-  } else if (response.ok) {
+  const response = await fetch(`https://api.github.com/repos/${repo}`, {
+    headers: { 'User-Agent': 'jasonlong.me' }
+  })
+  if (response.ok) {
     const data = await response.json()
     starCount = data.stargazers_count
-    const etag = response.headers.get('etag')
-    if (kv && etag && starCount) {
-      await kv.put(cacheKey, JSON.stringify({ etag, stars: starCount }))
-    }
   }
 } catch {
-  // Fallback to direct fetch on error
-  try {
-    const response = await fetch(`https://api.github.com/repos/${repo}`, {
-      headers: { 'User-Agent': 'jasonlong.me' }
-    })
-    if (response.ok) {
-      const data = await response.json()
-      starCount = data.stargazers_count
-    }
-  } catch {
-    // Give up
-  }
+  // Fetch failed, show without stars
 }
 ---
 

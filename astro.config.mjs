@@ -5,7 +5,7 @@ import mdx from '@astrojs/mdx'
 
 export default defineConfig({
   integrations: [tailwind(), mdx()],
-  output: 'server',
+  output: 'static',
   adapter: cloudflare(),
   devToolbar: {
     enabled: false,
