@@ -1,13 +1,15 @@
 ---
+import { env } from 'cloudflare:workers'
+
 const { name, description, repo } = Astro.props
 
 let starCount: number | null = null
 const cacheKey = repo.replace('/', '-')
 
-// Get KV binding from Cloudflare runtime (undefined in local dev)
-const kv = Astro.locals.runtime?.env?.GITHUB_STARS
-
 try {
+  // Access KV via cloudflare:workers module
+  const kv = env.GITHUB_STARS
+
   let cached: { etag: string, stars: number } | null = null
 
   if (kv) {
