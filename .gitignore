@@ -27,3 +27,4 @@ dist
 .astro
 .claude
 .netlify
+.wrangler
