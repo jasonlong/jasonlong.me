@@ -28,3 +28,11 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=jasonlong-me
+
+      - name: Clean up old deployments
+        uses: ulisesgascon/cloudflare-pages-clean-deployment-action@v1
+        with:
+          cloudflare-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          cloudflare-project-name: jasonlong-me
+          keep: 5
