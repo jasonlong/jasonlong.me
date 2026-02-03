@@ -34,11 +34,24 @@ jobs:
           CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          # Get all deployment IDs sorted by creation date (newest first), skip first 5
-          DEPLOYMENTS=$(curl -s -X GET \
+          RESPONSE=$(curl -s -X GET \
             "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/jasonlong-me/deployments?per_page=100" \
-            -H "Authorization: Bearer $CF_API_TOKEN" \
-            | jq -r '.result | sort_by(.created_on) | reverse | .[5:] | .[].id')
+            -H "Authorization: Bearer $CF_API_TOKEN")
+
+          # Check if we got a valid response with deployments
+          if ! echo "$RESPONSE" | jq -e '.result' > /dev/null 2>&1; then
+            echo "No deployments found or API error"
+            echo "$RESPONSE" | jq .
+            exit 0
+          fi
+
+          # Get deployment IDs to delete (all except 5 most recent)
+          DEPLOYMENTS=$(echo "$RESPONSE" | jq -r '.result | sort_by(.created_on) | reverse | .[5:] | .[].id // empty')
+
+          if [ -z "$DEPLOYMENTS" ]; then
+            echo "No old deployments to clean up"
+            exit 0
+          fi
 
           for id in $DEPLOYMENTS; do
             echo "Deleting deployment $id"
