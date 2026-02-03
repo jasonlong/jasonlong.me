@@ -30,9 +30,19 @@ jobs:
           command: pages deploy dist --project-name=jasonlong-me
 
       - name: Clean up old deployments
-        uses: ulisesgascon/cloudflare-pages-clean-deployment-action@v1
-        with:
-          cloudflare-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          cloudflare-project-name: jasonlong-me
-          keep: 5
+        env:
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          # Get all deployment IDs sorted by creation date (newest first), skip first 5
+          DEPLOYMENTS=$(curl -s -X GET \
+            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/jasonlong-me/deployments?per_page=100" \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            | jq -r '.result | sort_by(.created_on) | reverse | .[5:] | .[].id')
+
+          for id in $DEPLOYMENTS; do
+            echo "Deleting deployment $id"
+            curl -s -X DELETE \
+              "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/jasonlong-me/deployments/$id" \
+              -H "Authorization: Bearer $CF_API_TOKEN"
+          done
