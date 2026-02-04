@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       body: [
-        'PixelCode',
+        'Geist Mono',
         'SFMono-Regular',
         'Menlo',
         'Monaco',
