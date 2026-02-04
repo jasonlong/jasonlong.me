@@ -43,9 +43,13 @@ const { frontmatter } = Astro.props
     @apply font-body;
     @apply text-lg;
     @apply leading-snug;
-    @apply bg-zinc-900 dark:bg-zinc-900;
+    @apply bg-sky-400;
     @apply antialiased;
     @apply text-zinc-300;
+  }
+
+  body {
+    @apply bg-zinc-900;
   }
 
   a {
@@ -164,6 +168,10 @@ const { frontmatter } = Astro.props
   @media (prefers-color-scheme: dark) {
     html {
       color: rgb(from var(--text-red) r g b / 0.8);
+      background-color: var(--text-red);
+    }
+
+    body {
       @apply bg-black;
     }
 
