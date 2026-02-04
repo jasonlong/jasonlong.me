@@ -8,8 +8,8 @@ const { frontmatter } = Astro.props
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <meta name='description' content='Jason Long · Product Designerd' />
-    <meta name='theme-color' content='#38bdf8' media='(prefers-color-scheme: light)' />
-    <meta name='theme-color' content='#ff0000' media='(prefers-color-scheme: dark)' />
+    <meta name='theme-color' content='#0284c7' media='(prefers-color-scheme: light)' />
+    <meta name='theme-color' content='#38bdf8' media='(prefers-color-scheme: dark)' />
     <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
     <link rel='preload' href='/fonts/GeistMono-Variable.woff2' as='font' type='font/woff2' crossorigin />
@@ -35,25 +35,25 @@ const { frontmatter } = Astro.props
   }
 
   :root {
-    --link-color: oklch(68% 0.169 242);
-    --text-red: #ff0000;
+    --link-color-light: oklch(54% 0.169 242);
+    --link-color-dark: oklch(68% 0.169 242);
   }
 
   html {
     @apply font-body;
     @apply text-lg;
     @apply leading-snug;
-    @apply bg-sky-400;
+    @apply bg-sky-600;
     @apply antialiased;
-    @apply text-zinc-300;
+    @apply text-zinc-600;
   }
 
   body {
-    @apply bg-zinc-900 min-h-screen;
+    @apply bg-zinc-100 min-h-screen;
   }
 
   a {
-    @apply text-sky-400;
+    @apply text-sky-600;
   }
 
   a:focus-visible {
@@ -64,7 +64,7 @@ const { frontmatter } = Astro.props
 
   @media (color-gamut: p3) {
     a {
-      color: var(--link-color);
+      color: var(--link-color-light);
     }
   }
 
@@ -87,7 +87,7 @@ const { frontmatter } = Astro.props
   h2,
   h3,
   h4 {
-    @apply text-zinc-50 uppercase;
+    @apply text-zinc-900 uppercase;
   }
 
   h1:before,
@@ -97,7 +97,7 @@ const { frontmatter } = Astro.props
     @apply absolute;
     @apply -left-9;
     @apply w-6;
-    @apply text-zinc-600;
+    @apply text-zinc-300;
     @apply text-right;
   }
 
@@ -129,19 +129,19 @@ const { frontmatter } = Astro.props
 
   b:before,
   strong:before {
-    @apply text-zinc-600;
+    @apply text-zinc-300;
     content: '**';
   }
 
   b:after,
   strong:after {
-    @apply text-zinc-600;
+    @apply text-zinc-300;
     content: '**';
   }
 
   i:before,
   em:before {
-    @apply text-zinc-600;
+    @apply text-zinc-300;
     content: '_';
   }
 
@@ -167,52 +167,48 @@ const { frontmatter } = Astro.props
 
   @media (prefers-color-scheme: dark) {
     html {
-      color: rgb(from var(--text-red) r g b / 0.8);
-      background-color: var(--text-red);
+      @apply bg-sky-400;
+      @apply text-zinc-300;
     }
 
     body {
-      @apply bg-black min-h-screen;
+      @apply bg-zinc-900;
     }
 
     a {
-      color: var(--text-red);
-      @apply underline;
-      @apply decoration-dashed;
-      @apply underline-offset-4;
-      @apply !opacity-100;
+      @apply text-sky-400;
+    }
+
+    @media (color-gamut: p3) {
+      a {
+        color: var(--link-color-dark);
+      }
     }
 
     h1,
     h2,
     h3,
     h4 {
-      color: var(--text-red);
+      @apply text-zinc-50;
     }
 
     h1:before,
     h2:before,
     h3:before,
     h4:before {
-      color: var(--text-red);
-      @apply opacity-40;
+      @apply text-zinc-600;
     }
 
     b:before,
     strong:before,
     b:after,
     strong:after {
-      color: var(--text-red);
+      @apply text-zinc-600;
     }
 
     i:before,
     em:before {
-      color: var(--text-red);
-    }
-
-    hr:before {
-      @apply opacity-30;
-      @apply mix-blend-normal;
+      @apply text-zinc-600;
     }
   }
 </style>
