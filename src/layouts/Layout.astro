@@ -45,7 +45,7 @@ const { frontmatter } = Astro.props
     @apply leading-snug;
     @apply bg-sky-600;
     @apply antialiased;
-    @apply text-zinc-600;
+    @apply text-zinc-500;
   }
 
   body {
@@ -165,10 +165,14 @@ const { frontmatter } = Astro.props
     content: '----';
   }
 
+  .separator {
+    @apply text-zinc-300;
+  }
+
   @media (prefers-color-scheme: dark) {
     html {
       @apply bg-sky-400;
-      @apply text-zinc-300;
+      @apply text-zinc-400;
     }
 
     body {
@@ -208,6 +212,10 @@ const { frontmatter } = Astro.props
 
     i:before,
     em:before {
+      @apply text-zinc-600;
+    }
+
+    .separator {
       @apply text-zinc-600;
     }
   }
