@@ -1,11 +1,13 @@
 ---
+import { GITHUB_TOKEN } from 'astro:env/server'
+
 const { name, description, repo } = Astro.props
 
 let starCount: number | null = null
 
 const headers: Record<string, string> = { 'User-Agent': 'jasonlong.me' }
-if (process.env.GITHUB_TOKEN) {
-  headers['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`
+if (GITHUB_TOKEN) {
+  headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`
 }
 
 try {
