@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css'
 const { frontmatter } = Astro.props
 ---
 
@@ -28,6 +29,7 @@ const { frontmatter } = Astro.props
   </body>
 </html>
 <style is:global>
+  @reference '../styles/global.css';
   @font-face {
     font-family: 'Geist Mono';
     src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
