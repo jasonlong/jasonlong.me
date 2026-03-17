@@ -30,7 +30,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wrangler-version: '3'
-          command: pages deploy dist --project-name=jasonlong-me
+          command: pages deploy dist --project-name=jasonlong-me --branch=main
 
       - name: Clean up old deployments
         env:
