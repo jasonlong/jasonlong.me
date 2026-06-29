@@ -18,7 +18,7 @@
     "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^2.0.0",
-    "prettier": "^3.8.4",
+    "prettier": "^3.9.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.8.0"
   }
