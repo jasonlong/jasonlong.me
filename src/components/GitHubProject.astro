@@ -7,7 +7,7 @@ let starCount: number | null = null
 
 const headers: Record<string, string> = { 'User-Agent': 'jasonlong.me' }
 if (GITHUB_TOKEN) {
-  headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`
+  headers.Authorization = `Bearer ${GITHUB_TOKEN}`
 }
 
 try {
@@ -23,4 +23,6 @@ try {
 }
 ---
 
-<a href=`https://github.com/${repo}`>{name}</a>: {description}{starCount && ` (⭑${new Intl.NumberFormat().format(starCount)})`}
+<a href={`https://github.com/${repo}`}>{name}</a>: {description}{
+  starCount && ` (⭑${new Intl.NumberFormat().format(starCount)})`
+}
