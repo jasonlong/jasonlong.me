@@ -1,6 +1,6 @@
-import { defineConfig, envField } from 'astro/config'
-import tailwindcss from '@tailwindcss/vite'
 import mdx from '@astrojs/mdx'
+import tailwindcss from '@tailwindcss/vite'
+import { defineConfig, envField } from 'astro/config'
 
 export default defineConfig({
   integrations: [mdx()],
@@ -9,7 +9,11 @@ export default defineConfig({
   },
   env: {
     schema: {
-      GITHUB_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
+      GITHUB_TOKEN: envField.string({
+        context: 'server',
+        access: 'secret',
+        optional: true,
+      }),
     },
   },
   devToolbar: {

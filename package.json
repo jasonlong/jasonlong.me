@@ -3,9 +3,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "biome check . && prettier --check 'src/**/*.{astro,mdx}' && astro check",
+    "format": "biome check --write . && prettier --write 'src/**/*.{astro,mdx}'",
+    "lint": "biome lint ."
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.3",
@@ -14,12 +17,11 @@
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^8.64.0",
-    "eslint": "^10.7.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-astro": "^3.0.0",
+    "@astrojs/check": "^0.9.9",
+    "@biomejs/biome": "^2.5.3",
     "prettier": "^3.9.5",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.8.0"
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "typescript": "^6.0.3"
   }
 }

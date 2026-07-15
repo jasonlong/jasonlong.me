@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+
 const { frontmatter } = Astro.props
 ---
 
@@ -9,18 +10,33 @@ const { frontmatter } = Astro.props
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <meta name='description' content='Jason Long · Product Designer' />
-    <meta name='theme-color' content='#0284c7' media='(prefers-color-scheme: light)' />
-    <meta name='theme-color' content='#38bdf8' media='(prefers-color-scheme: dark)' />
+    <meta
+      name='theme-color'
+      content='#0284c7'
+      media='(prefers-color-scheme: light)'
+    />
+    <meta
+      name='theme-color'
+      content='#38bdf8'
+      media='(prefers-color-scheme: dark)'
+    />
     <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
-    <link rel='preload' href='/fonts/GeistMono-Variable.woff2' as='font' type='font/woff2' crossorigin />
+    <link
+      rel='preload'
+      href='/fonts/GeistMono-Variable.woff2'
+      as='font'
+      type='font/woff2'
+      crossorigin
+    />
     <title>{frontmatter.title}</title>
     <script
+      is:inline
       defer
       src='https://cloud.umami.is/script.js'
       data-website-id='6dbba5d7-bf0c-4c2a-9163-68630f41d511'></script>
   </head>
-  <body class='flex pl-10 pr-6 sm:px-6'>
+  <body class='flex pr-6 pl-10 sm:px-6'>
     <div
       class='max-w-xs_ relative mx-auto my-10 sm:max-w-lg md:my-20 md:max-w-2xl lg:max-w-3xl'
     >
@@ -51,7 +67,7 @@ const { frontmatter } = Astro.props
   }
 
   body {
-    @apply bg-zinc-100 min-h-screen;
+    @apply min-h-screen bg-zinc-100;
   }
 
   a {
