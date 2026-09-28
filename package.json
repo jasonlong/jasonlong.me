@@ -11,9 +11,9 @@
     "lint": "biome lint ."
   },
   "dependencies": {
-    "@astrojs/mdx": "^8.0.1",
+    "@astrojs/mdx": "^8.0.2",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.3.3",
+    "astro": "^7.3.5",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
