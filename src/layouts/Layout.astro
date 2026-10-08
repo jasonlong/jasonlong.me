@@ -24,7 +24,7 @@ const { frontmatter } = Astro.props
     <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
     <link
       rel='preload'
-      href='/fonts/GeistMono-Variable.woff2'
+      href='https://raw.githubusercontent.com/paper-design/paper-mono/e6eaeceaef02e77e3db997711e07a16378de2bd7/fonts/webfonts/PaperMono%5Bwght%5D.woff2'
       as='font'
       type='font/woff2'
       crossorigin
@@ -47,8 +47,10 @@ const { frontmatter } = Astro.props
 <style is:global>
   @reference '../styles/global.css';
   @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
+    font-family: 'Paper Mono';
+    src: url('https://raw.githubusercontent.com/paper-design/paper-mono/e6eaeceaef02e77e3db997711e07a16378de2bd7/fonts/webfonts/PaperMono%5Bwght%5D.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 100 800;
     font-display: swap;
   }
 
