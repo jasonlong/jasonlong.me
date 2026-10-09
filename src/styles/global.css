@@ -5,3 +5,9 @@
     'Paper Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
 }
+
+html {
+  font-feature-settings:
+    'ss02' on,
+    'ss03' on;
+}
