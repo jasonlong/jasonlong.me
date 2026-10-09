@@ -9,5 +9,7 @@
 html {
   font-feature-settings:
     'ss02' on,
-    'ss03' on;
+    'ss03' on,
+    'zero' on,
+    'cv01' on;
 }
