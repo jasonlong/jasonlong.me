@@ -2,14 +2,6 @@
 
 @theme {
   --font-body:
-    'Paper Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Geist Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
-}
-
-html {
-  font-feature-settings:
-    'ss02' on,
-    'ss03' on,
-    'zero' on,
-    'cv01' on;
 }
